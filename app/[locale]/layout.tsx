@@ -4,6 +4,10 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { display, mono, sans } from "@/lib/fonts";
 import { routing } from "@/i18n/routing";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { Nav } from "@/components/layout/Nav";
+import { TelemetryBar } from "@/components/layout/TelemetryBar";
+import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -33,7 +37,14 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${display.variable} ${mono.variable} ${sans.variable}`}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <SmoothScroll>
+            <Nav locale={locale} />
+            {children}
+            <TelemetryBar locale={locale} />
+            <Footer />
+          </SmoothScroll>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
