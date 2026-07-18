@@ -4,5 +4,15 @@
     "about": "About",
     "services": "Services",
     "contact": "Contact"
+  },
+  "sections": {
+    "hero": "Hero"
+  },
+  "hero": {
+    "role": "Full-Stack Developer · Leskovac, RS",
+    "nameFirst": "Aleksandar",
+    "nameLast": "Radivojević",
+    "tagline": "I build tools that work — not just websites.",
+    "cta": "View work"
   }
 }

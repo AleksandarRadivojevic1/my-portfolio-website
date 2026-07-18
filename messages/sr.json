@@ -4,5 +4,15 @@
     "about": "O meni",
     "services": "Usluge",
     "contact": "Kontakt"
+  },
+  "sections": {
+    "hero": "Hero"
+  },
+  "hero": {
+    "role": "Full-Stack Developer · Leskovac, RS",
+    "nameFirst": "Aleksandar",
+    "nameLast": "Radivojević",
+    "tagline": "Pravim alate koji rade — ne samo sajtove.",
+    "cta": "Vidi radove"
   }
 }
