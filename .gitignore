@@ -1,0 +1,11 @@
+# Local planning & design docs — never uploaded
+docs/
+
+# Next.js
+/.next/
+/node_modules
+/out/
+.env*
+/coverage
+*.tsbuildinfo
+.vercel
