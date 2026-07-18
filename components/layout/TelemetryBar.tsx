@@ -20,15 +20,20 @@ function formatTime(date: Date) {
 export function TelemetryBar({ locale }: TelemetryBarProps) {
   const { scrollYProgress } = useScroll();
   const [progress, setProgress] = useState(0);
-  const [time, setTime] = useState(() => formatTime(new Date()));
+  const [time, setTime] = useState<string | null>(null);
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     setProgress(Math.round(latest * 100));
   });
 
   useEffect(() => {
+    // Client-only mount gate: the server (and the client's first paint) render
+    // the `--:--` / `0%` placeholders. The first rAF callback below seeds the
+    // real clock and scroll progress, so the wall clock never touches the
+    // initial render path and server/client HTML stay identical.
     let frameId: number;
     let lastMinute = -1;
+    let progressSeeded = false;
 
     const tick = () => {
       const now = new Date();
@@ -37,12 +42,16 @@ export function TelemetryBar({ locale }: TelemetryBarProps) {
         lastMinute = minute;
         setTime(formatTime(now));
       }
+      if (!progressSeeded) {
+        progressSeeded = true;
+        setProgress(Math.round(scrollYProgress.get() * 100));
+      }
       frameId = requestAnimationFrame(tick);
     };
 
     frameId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frameId);
-  }, []);
+  }, [scrollYProgress]);
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/80 font-mono text-xs text-muted backdrop-blur">
@@ -52,7 +61,7 @@ export function TelemetryBar({ locale }: TelemetryBarProps) {
           {progress.toString().padStart(2, '0')}% ↕
         </span>
         <span>
-          {time} · {locale.toUpperCase()}
+          {time ?? '--:--'} · {locale.toUpperCase()}
         </span>
       </div>
     </div>
