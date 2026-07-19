@@ -182,5 +182,91 @@
     "consult": "Prvih 30 minuta je besplatan poziv, bez obaveze.",
     "emailLabel": "Email",
     "phoneLabel": "Telefon"
+  },
+  "caseCajs": {
+    "meta": {
+      "title": "Optika Cajs — Studija slučaja",
+      "description": "Kompletan onlajn sistem za lokalnu optiku — prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno i vođeno do produkcije samostalno."
+    },
+    "hero": {
+      "kicker": "Studija slučaja",
+      "title": "Optika Cajs",
+      "tagline": "Kompletan onlajn sistem za lokalnu optiku — prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno od nule i vođeno do produkcije samostalno.",
+      "liveLabel": "Pogledaj sajt uživo",
+      "backLabel": "Nazad na Work"
+    },
+    "sections": {
+      "challenge": "Izazov",
+      "features": "Šta je isporučeno",
+      "stats": "Brojke",
+      "outcomes": "Rezultati",
+      "screenshots": "Snimci ekrana",
+      "testimonial": "Izjava"
+    },
+    "challenge": {
+      "body": "Optika Cajs je imala fizičku radnju i osnovni sajt-vizitkarticu — bez mogućnosti prodaje, zakazivanja ili konfigurisanja dioptrijskih stakala na mreži. Svaki upit je značio telefonski poziv ili dolazak u radnju. Cilj je bio sistem koji radi posao i van radnog vremena: prodaje, zakazuje i vodi evidenciju bez dodatnog osoblja."
+    },
+    "features": {
+      "shop": {
+        "title": "Onlajn prodavnica",
+        "body": "Kompletna prodavnica naočara i sočiva sa kategorijama, pretragom i korpom — spremna za realnu prodaju, ne samo katalog."
+      },
+      "configurator": {
+        "title": "Konfigurator dioptrijskih stakala",
+        "body": "Korak-po-korak izbor jačine, tipa stakla i dodataka, sa cenom koja se ažurira uživo — najsloženiji deo sistema."
+      },
+      "accounts": {
+        "title": "Nalozi kupaca",
+        "body": "Registracija, istorija porudžbina i sačuvani podaci o dioptriji za brže sledeće poručivanje."
+      },
+      "booking": {
+        "title": "Zakazivanje pregleda",
+        "body": "Onlajn zakazivanje termina za pregled vida, sa potvrdom i podsetnicima — bez telefonskih poziva."
+      },
+      "admin": {
+        "title": "Administratorski panel",
+        "body": "Upravljanje proizvodima, porudžbinama i terminima na jednom mestu, bez dodirivanja koda."
+      },
+      "tech": {
+        "title": "Bezbedna arhitektura",
+        "body": "HMAC SHA-256 potpisivanje osetljivih operacija, kontejnerizovano okruženje i baza podataka projektovana za rast."
+      },
+      "testing": {
+        "title": "Automatizovano testiranje",
+        "body": "24 automatizovana testa pokrivaju kritične tokove — prodaju, konfigurator i zakazivanje — pre svakog objavljivanja."
+      },
+      "responsive": {
+        "title": "Responzivan dizajn",
+        "body": "Isto iskustvo na telefonu, tabletu i računaru — većina kupaca dolazi sa mobilnog."
+      }
+    },
+    "outcomes": {
+      "sales": {
+        "title": "Prodaja 24 časa dnevno",
+        "body": "Radnja sada prodaje i van radnog vremena — porudžbina ne čeka da se otvore vrata."
+      },
+      "booking": {
+        "title": "Manje telefonskih poziva",
+        "body": "Zakazivanje pregleda ide direktno kroz sajt, bez dodatnog opterećenja osoblja na telefonu."
+      },
+      "visibility": {
+        "title": "Vidljivost na internetu",
+        "body": "Lokalna optika sada ima prisustvo na mreži uporedivo sa mnogo većim lancima."
+      },
+      "ownership": {
+        "title": "Puno vlasništvo",
+        "body": "Kod, sadržaj i podaci pripadaju Optici Cajs od prvog dana — bez zaključavanja kod agencije ili platforme."
+      }
+    },
+    "stats": {
+      "pages": "Stranica",
+      "loc": "Linija koda",
+      "tests": "Automatizovanih testova",
+      "marketValue": "Tržišna vrednost",
+      "effort": "Uloženo vremena"
+    },
+    "screenshots": {
+      "placeholder": "Snimak ekrana stiže uskoro"
+    }
   }
 }

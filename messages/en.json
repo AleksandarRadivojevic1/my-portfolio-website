@@ -182,5 +182,91 @@
     "consult": "The first 30 minutes are a free, no-obligation call.",
     "emailLabel": "Email",
     "phoneLabel": "Phone"
+  },
+  "caseCajs": {
+    "meta": {
+      "title": "Optika Cajs — Case Study",
+      "description": "A complete online system for a local optical shop — an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo."
+    },
+    "hero": {
+      "kicker": "Case study",
+      "title": "Optika Cajs",
+      "tagline": "A complete online system for a local optical shop — an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo.",
+      "liveLabel": "View live site",
+      "backLabel": "Back to Work"
+    },
+    "sections": {
+      "challenge": "Challenge",
+      "features": "What was delivered",
+      "stats": "By the numbers",
+      "outcomes": "Outcomes",
+      "screenshots": "Screenshots",
+      "testimonial": "Testimonial"
+    },
+    "challenge": {
+      "body": "Optika Cajs had a physical shop and a basic brochure site — no way to sell, book, or configure prescription lenses online. Every inquiry meant a phone call or a shop visit. The goal was a system that keeps working outside business hours: selling, booking, and keeping records without extra staff."
+    },
+    "features": {
+      "shop": {
+        "title": "Online store",
+        "body": "A full glasses-and-lenses store with categories, search, and a cart — built to actually sell, not just display a catalog."
+      },
+      "configurator": {
+        "title": "Prescription-lens configurator",
+        "body": "Step-by-step selection of strength, lens type, and add-ons, with a live-updating price — the most complex part of the system."
+      },
+      "accounts": {
+        "title": "Customer accounts",
+        "body": "Sign-up, order history, and saved prescription data for faster repeat orders."
+      },
+      "booking": {
+        "title": "Eye-exam booking",
+        "body": "Online booking for eye exams, with confirmation and reminders — no phone calls required."
+      },
+      "admin": {
+        "title": "Admin panel",
+        "body": "Manage products, orders, and appointments from one place, without touching code."
+      },
+      "tech": {
+        "title": "Secure architecture",
+        "body": "HMAC SHA-256 signing for sensitive operations, a containerized environment, and a database designed to scale."
+      },
+      "testing": {
+        "title": "Automated testing",
+        "body": "24 automated tests cover the critical flows — shop, configurator, and booking — before every release."
+      },
+      "responsive": {
+        "title": "Responsive design",
+        "body": "The same experience on phone, tablet, and desktop — most customers arrive on mobile."
+      }
+    },
+    "outcomes": {
+      "sales": {
+        "title": "Sales around the clock",
+        "body": "The shop now sells outside business hours — an order doesn't wait for the doors to open."
+      },
+      "booking": {
+        "title": "Fewer phone calls",
+        "body": "Exam bookings go straight through the site, without loading extra work onto staff on the phone."
+      },
+      "visibility": {
+        "title": "Online visibility",
+        "body": "A local optical shop now has an online presence comparable to much bigger chains."
+      },
+      "ownership": {
+        "title": "Full ownership",
+        "body": "Code, content, and data have belonged to Optika Cajs from day one — no lock-in to an agency or platform."
+      }
+    },
+    "stats": {
+      "pages": "Pages",
+      "loc": "Lines of code",
+      "tests": "Automated tests",
+      "marketValue": "Market value",
+      "effort": "Time invested"
+    },
+    "screenshots": {
+      "placeholder": "Screenshot coming soon"
+    }
   }
 }
