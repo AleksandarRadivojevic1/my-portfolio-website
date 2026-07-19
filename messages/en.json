@@ -9,7 +9,8 @@
     "hero": "Hero",
     "about": "About",
     "services": "Services",
-    "work": "Work"
+    "work": "Work",
+    "contact": "Contact"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -174,6 +175,32 @@
     "testimonial": {
       "kicker": "Testimonial",
       "comingSoon": "Client testimonial coming soon."
+    }
+  },
+  "contact": {
+    "intro": "Have a project in mind? Let's talk — no pressure, no invoice.",
+    "consult": "The first 30 minutes are a free, no-obligation call.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "A few lines about your project…",
+      "honeypotLabel": "Leave this field empty",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent — I'll get back to you soon.",
+      "errors": {
+        "validation": "Please check the fields below and try again.",
+        "unavailable": "The contact form isn't accepting messages right now — email me directly instead.",
+        "failed": "Something went wrong. Try again, or email me directly."
+      },
+      "fieldErrors": {
+        "name": "Name needs to be at least 2 characters.",
+        "email": "Enter a valid email address.",
+        "message": "Message needs to be at least 10 characters."
+      }
     }
   }
 }

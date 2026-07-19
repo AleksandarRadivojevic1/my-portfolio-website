@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Work } from "@/components/sections/Work";
+import { Contact } from "@/components/sections/Contact";
 
 type HomeProps = {
   params: Promise<{ locale: string }>;
@@ -18,7 +19,7 @@ export default async function Home({ params }: HomeProps) {
       <About />
       <Services />
       <Work />
-      {/* Task 11 appends the Contact section here. */}
+      <Contact />
     </main>
   );
 }
