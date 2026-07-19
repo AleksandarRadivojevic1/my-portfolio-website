@@ -3,6 +3,7 @@
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 import type { ReactNode } from 'react';
+import { registerScrollController } from '@/lib/scrollLock';
 
 type SmoothScrollProps = {
   children: ReactNode;
@@ -15,6 +16,9 @@ export function SmoothScroll({ children }: SmoothScrollProps) {
     }
 
     const lenis = new Lenis();
+    // Adopt the current scroll-lock state (the boot preloader may already have
+    // locked scrolling before this mounted).
+    const unregister = registerScrollController(lenis);
 
     let frameId: number;
     function raf(time: number) {
@@ -24,6 +28,7 @@ export function SmoothScroll({ children }: SmoothScrollProps) {
     frameId = requestAnimationFrame(raf);
 
     return () => {
+      unregister();
       cancelAnimationFrame(frameId);
       lenis.destroy();
     };

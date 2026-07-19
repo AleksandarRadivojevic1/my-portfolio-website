@@ -9,7 +9,9 @@ import { MenuBar } from './MenuBar';
 import { ProjectWindow, type WindowContent } from './ProjectWindow';
 
 const FOLDER_SIZE: Size = { width: 112, height: 88 };
-const WINDOW_SIZE: Size = { width: 512, height: 480 };
+// Height is a generous floor used only for drag-clamping so a window can't be
+// dragged far enough down to clip its footer (links) past the screen edge.
+const WINDOW_SIZE: Size = { width: 480, height: 560 };
 
 interface OpenWindow {
   id: string;
@@ -124,8 +126,8 @@ export function Desktop() {
       const existing = ws.find((w) => w.id === id);
       topZ.current += 1;
       if (existing) return ws.map((w) => (w.id === id ? { ...w, z: topZ.current } : w));
-      const offset = ws.length * 24;
-      return [...ws, { id, x: 120 + offset, y: 96 + offset, z: topZ.current }];
+      const offset = ws.length * 22;
+      return [...ws, { id, x: 28 + offset, y: 20 + offset, z: topZ.current }];
     });
   }, []);
 
@@ -179,6 +181,11 @@ export function Desktop() {
         setDraggingId(null);
         window.removeEventListener('pointermove', move);
         window.removeEventListener('pointerup', up);
+        // Clear the drag flag after the synthetic click has had its chance to
+        // read it (rAF fires after the click), so it never persists stale.
+        requestAnimationFrame(() => {
+          dragMoved.current = false;
+        });
       };
       window.addEventListener('pointermove', move);
       window.addEventListener('pointerup', up);
@@ -231,71 +238,148 @@ export function Desktop() {
     <section
       id="work"
       aria-label={t('sections.work')}
-      className="relative min-h-[90vh] w-full overflow-hidden px-4 py-10"
+      className="relative w-full px-4 py-16 sm:py-24"
     >
-      {!isMobile && <MenuBar brand={t('work.desktop.menuBrand')} />}
-
-      {/* Ghosted background type — the "wallpaper" over the Atmosphere layer. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 flex items-center justify-center"
-      >
-        <span className="select-none font-display text-[18vw] leading-none text-fg/[0.03]">
-          {t('work.desktop.menuBrand')}
-        </span>
-      </div>
-
-      <div className="mb-6 px-2 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-        03 — {t('sections.work')}
-      </div>
-
-      {isMobile ? (
-        // Mobile: static tappable grid.
-        <div className="grid grid-cols-2 gap-4">
-          {DESKTOP_PROJECTS.map((p) => (
-            <FolderIcon key={p.id} id={p.id} label={folderLabel(p)} locked={p.kind === 'locked'} onActivate={activate} />
-          ))}
+      <div className="mx-auto w-full max-w-6xl">
+        {/* Label above the screen so the frame reads as a discrete object. */}
+        <div className="mb-4 px-1 font-mono text-xs uppercase tracking-[0.2em] text-muted">
+          02 — {t('sections.work')}
         </div>
-      ) : (
-        // Desktop: absolutely-positioned draggable folders.
-        <div ref={surfaceRef} className="relative h-[70vh] w-full">
-          {DESKTOP_PROJECTS.map((p) => {
-            const pos = positions[p.id];
-            return (
-              <FolderIcon
-                key={p.id}
-                id={p.id}
-                label={folderLabel(p)}
-                locked={p.kind === 'locked'}
-                x={pos?.x}
-                y={pos?.y}
-                dragging={draggingId === p.id}
-                onActivate={activate}
-                onPointerDown={startFolderDrag}
-              />
-            );
-          })}
-        </div>
-      )}
 
-      {/* Open windows */}
-      {openWindows.map((w) => {
-        const project = DESKTOP_PROJECTS.find((p) => p.id === w.id);
-        if (!project) return null;
-        return (
-          <ProjectWindow
-            key={w.id}
-            content={buildContent(project)}
-            mode={isMobile ? 'sheet' : 'window'}
-            x={w.x}
-            y={w.y}
-            z={w.z}
-            onClose={closeWindow}
-            onFocus={bringToFront}
-            onTitlePointerDown={startWindowDrag}
+        {/* The screen: a bounded, lit monitor panel sitting on the page. */}
+        <div className="relative flex h-[88vh] min-h-[600px] flex-col overflow-hidden rounded-xl border border-line bg-black/20 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.9)]">
+          {/* Bezel top-light + inner vignette so it reads as a lit display. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-20 rounded-xl shadow-[inset_0_1px_0_rgba(233,225,214,0.06),inset_0_0_160px_rgba(0,0,0,0.55)]"
           />
-        );
-      })}
+          {/* Faint warm glow from the top edge. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(85% 55% at 50% -12%, rgba(232,176,75,0.06), transparent 62%)',
+            }}
+          />
+
+          {/* Top chrome */}
+          <MenuBar brand={t('work.desktop.menuBrand')} />
+
+          {/* Desktop surface — folders and windows live inside the screen. */}
+          <div
+            ref={surfaceRef}
+            className={`relative flex-1 ${isMobile ? 'overflow-y-auto' : 'overflow-hidden'}`}
+          >
+            {/* Screen surface texture — reads as a live CRT/computer display.
+                Sits behind folders/windows so content stays crisp. */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+              {/* Phosphor glow — a display emits brightest at its centre. */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'radial-gradient(120% 90% at 50% 42%, rgba(232,176,75,0.055), transparent 60%)',
+                }}
+              />
+              {/* Faint workspace grid. */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(rgba(233,225,214,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(233,225,214,0.022) 1px, transparent 1px)',
+                  backgroundSize: '46px 46px',
+                }}
+              />
+              {/* Ghosted brand watermark. */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="select-none font-display text-[12vw] leading-none text-fg/[0.03]">
+                  {t('work.desktop.menuBrand')}
+                </span>
+              </div>
+              {/* CRT scanlines. */}
+              <div
+                className="absolute inset-0 opacity-60"
+                style={{
+                  backgroundImage:
+                    'repeating-linear-gradient(to bottom, rgba(0,0,0,0.18) 0px, rgba(0,0,0,0.18) 1px, transparent 1px, transparent 3px)',
+                }}
+              />
+              {/* Slow refresh sweep. */}
+              <div className="crt-sweep absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-transparent via-[rgba(233,225,214,0.05)] to-transparent" />
+            </div>
+
+            {isMobile ? (
+              // Mobile: static tappable grid.
+              <div className="grid grid-cols-2 gap-4 p-6">
+                {DESKTOP_PROJECTS.map((p) => (
+                  <FolderIcon
+                    key={p.id}
+                    id={p.id}
+                    label={folderLabel(p)}
+                    locked={p.kind === 'locked'}
+                    onActivate={activate}
+                  />
+                ))}
+              </div>
+            ) : (
+              // Desktop: absolutely-positioned draggable folders.
+              DESKTOP_PROJECTS.map((p) => {
+                const pos = positions[p.id];
+                return (
+                  <FolderIcon
+                    key={p.id}
+                    id={p.id}
+                    label={folderLabel(p)}
+                    locked={p.kind === 'locked'}
+                    x={pos?.x}
+                    y={pos?.y}
+                    dragging={draggingId === p.id}
+                    onActivate={activate}
+                    onPointerDown={startFolderDrag}
+                  />
+                );
+              })
+            )}
+
+            {/* Open windows */}
+            {openWindows.map((w) => {
+              const project = DESKTOP_PROJECTS.find((p) => p.id === w.id);
+              if (!project) return null;
+              return (
+                <ProjectWindow
+                  key={w.id}
+                  content={buildContent(project)}
+                  mode={isMobile ? 'sheet' : 'window'}
+                  x={w.x}
+                  y={w.y}
+                  z={w.z}
+                  onClose={closeWindow}
+                  onFocus={bringToFront}
+                  onTitlePointerDown={startWindowDrag}
+                />
+              );
+            })}
+          </div>
+
+          {/* Bottom status strip — language-neutral, sells the "screen". */}
+          <div className="flex items-center justify-between border-t border-line px-4 py-2 font-mono text-[0.65rem] tracking-[0.25em] text-muted">
+            <span className="flex items-center gap-1.5">
+              {DESKTOP_PROJECTS.map((p) => (
+                <span
+                  key={p.id}
+                  aria-hidden="true"
+                  className={p.kind === 'locked' ? 'text-muted/40' : 'text-accent'}
+                >
+                  ▪
+                </span>
+              ))}
+              <span className="ml-2 tabular-nums">{DESKTOP_PROJECTS.length}</span>
+            </span>
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-accent motion-safe:animate-pulse" />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

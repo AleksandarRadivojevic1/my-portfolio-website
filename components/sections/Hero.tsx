@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { GridBackground } from '@/components/ui/GridBackground';
 import { SectionCounter } from '@/components/ui/SectionCounter';
 import { MonoLabel } from '@/components/ui/MonoLabel';
 import { Reveal } from '@/components/ui/Reveal';
@@ -15,7 +14,6 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 py-32"
     >
-      <GridBackground />
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8">
         <SectionCounter index={0} labelKey="sections.hero" />
         <MonoLabel>{t('role')}</MonoLabel>

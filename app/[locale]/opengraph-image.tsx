@@ -14,7 +14,7 @@ export const contentType = 'image/png';
 export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;
   const locale = hasLocale(routing.locales, rawLocale) ? rawLocale : routing.defaultLocale;
-  const role = locale === 'sr' ? 'Fulstek Programer · Leskovac, RS' : 'Full-Stack Developer · Leskovac, RS';
+  const role = locale === 'sr' ? 'Full-Stack Programer · Leskovac, RS' : 'Full-Stack Developer · Leskovac, RS';
 
   return new ImageResponse(
     (

@@ -16,7 +16,7 @@ export function Services() {
   return (
     <section id="services" className="relative px-6 py-32">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-16">
-        <SectionCounter index={2} labelKey="sections.services" />
+        <SectionCounter index={3} labelKey="sections.services" />
 
         <p className="max-w-2xl text-base text-fg sm:text-lg">{t('intro')}</p>
 

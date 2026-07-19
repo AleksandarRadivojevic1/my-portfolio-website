@@ -106,7 +106,7 @@ export function ProjectWindow({
         'flex flex-col border border-line bg-bg/95 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.8)] backdrop-blur-sm outline-none',
         isSheet
           ? 'fixed inset-0 z-50'
-          : 'absolute max-h-[80vh] w-[min(92vw,32rem)]',
+          : 'absolute max-h-[calc(100%-2rem)] w-[min(90%,30rem)]',
       ].join(' ')}
     >
       {/* Title bar */}

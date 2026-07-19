@@ -24,8 +24,8 @@ export default async function Home({ params }: HomeProps) {
     <main>
       <Hero />
       <About />
-      <Services />
       <Work />
+      <Services />
       <Contact />
     </main>
   );
