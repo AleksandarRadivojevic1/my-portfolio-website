@@ -8,7 +8,8 @@
   "sections": {
     "hero": "Hero",
     "about": "About",
-    "services": "Services"
+    "services": "Services",
+    "work": "Work"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -155,5 +156,24 @@
       }
     },
     "cta": "Start a project"
+  },
+  "work": {
+    "intro": "Depth over breadth — two projects that say more than ten in a row.",
+    "cajs": {
+      "role": "Solo build — from idea to production",
+      "title": "Optika Cajs",
+      "summary": "A complete online system for a local optical shop — an online store, a prescription-lens configurator, and eye-exam booking, all in one place. Not a storefront that just sits on the internet, but a tool that sells and books appointments 24 hours a day.",
+      "cta": "View case study"
+    },
+    "skedio": {
+      "label": "Product",
+      "title": "Skedio",
+      "summary": "A booking SaaS built for salons, clinics, spas, and gyms. A product in progress, outside client work.",
+      "liveLabel": "View live"
+    },
+    "testimonial": {
+      "kicker": "Testimonial",
+      "comingSoon": "Client testimonial coming soon."
+    }
   }
 }

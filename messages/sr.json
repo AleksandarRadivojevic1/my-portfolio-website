@@ -8,7 +8,8 @@
   "sections": {
     "hero": "Hero",
     "about": "About",
-    "services": "Services"
+    "services": "Services",
+    "work": "Work"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -155,5 +156,24 @@
       }
     },
     "cta": "Započni projekat"
+  },
+  "work": {
+    "intro": "Dubina umesto širine — dva projekta koja govore više od deset u nizu.",
+    "cajs": {
+      "role": "Samostalna izrada — od ideje do produkcije",
+      "title": "Optika Cajs",
+      "summary": "Kompletan onlajn sistem za jednu lokalnu optiku — prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda na jednom mestu. Ne izlog koji stoji na internetu, već alat koji prodaje i zakazuje 24 časa dnevno.",
+      "cta": "Pogledaj studiju slučaja"
+    },
+    "skedio": {
+      "label": "Proizvod",
+      "title": "Skedio",
+      "summary": "SaaS za onlajn zakazivanje, napravljen za salone, ordinacije, spa centre i teretane. Proizvod u razvoju, van klijentskih projekata.",
+      "liveLabel": "Pogledaj uživo"
+    },
+    "testimonial": {
+      "kicker": "Izjava",
+      "comingSoon": "Izjava klijenta stiže uskoro."
+    }
   }
 }

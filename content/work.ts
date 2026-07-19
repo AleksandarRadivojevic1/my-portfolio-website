@@ -16,6 +16,12 @@ export interface CaseStudyStats {
   effort: string;
 }
 
+export interface Testimonial {
+  quote: string;
+  author: string;
+  role?: string;
+}
+
 export interface CaseStudy {
   id: string;
   slug: string;
@@ -26,6 +32,8 @@ export interface CaseStudy {
   outcomes: string[];
   stats: CaseStudyStats;
   stack: string[];
+  /** Client quote for the Work section's TestimonialSlot. Absent until collected — see spec §6.1. */
+  testimonial?: Testimonial;
 }
 
 export const CAJS: CaseStudy = {
@@ -51,6 +59,8 @@ export const CAJS: CaseStudy = {
     effort: '~250–300h',
   },
   stack: ['PostgreSQL', 'Vitest', 'Docker', 'HMAC SHA-256'],
+  // NOTE: no quote collected yet — TestimonialSlot renders the "coming soon"
+  // state until this is populated. High-priority content task for Alex.
 };
 
 export interface WorkItem {
