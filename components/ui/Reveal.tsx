@@ -53,6 +53,7 @@ export function Reveal({ children, as = 'div', delay = 0 }: RevealProps) {
 
   return (
     <MotionComp
+      data-reveal
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10%' }}

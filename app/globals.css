@@ -14,3 +14,10 @@
 html { background: var(--color-bg); color: var(--color-fg); }
 body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* No-JS fallback: framer-motion bakes `initial={{opacity:0}}` into an inline
+   style during SSR. Without JavaScript, `whileInView` never fires, so that
+   content would stay permanently invisible. The blocking inline script in
+   the root layout adds `js` to <html> before first paint; when it's absent
+   (JS disabled/blocked), neutralize the baked-in hidden state. */
+html:not(.js) [data-reveal] { opacity: 1 !important; transform: none !important; }

@@ -27,3 +27,20 @@ test('reduced motion: no hidden/animated inline style survives mount (no permane
   // SSR-safe initial render before the post-mount correction).
   expect(wrapper?.getAttribute('style')).toBeNull();
 });
+
+test('animated branch: renders a [data-reveal] marker so no-JS CSS can neutralize the baked-in hidden style', () => {
+  window.matchMedia = ((q: string) => ({
+    matches: false,
+    media: q,
+    addEventListener() {},
+    removeEventListener() {},
+    addListener() {},
+    removeListener() {},
+    onchange: null,
+    dispatchEvent: () => false,
+  })) as unknown as typeof window.matchMedia;
+
+  render(<Reveal><span>hi</span></Reveal>);
+  const wrapper = screen.getByText('hi').parentElement;
+  expect(wrapper?.hasAttribute('data-reveal')).toBe(true);
+});

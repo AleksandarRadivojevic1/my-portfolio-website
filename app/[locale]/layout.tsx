@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { display, mono, sans } from "@/lib/fonts";
 import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
@@ -37,6 +38,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${display.variable} ${mono.variable} ${sans.variable}`}>
       <body>
+        <Script id="js-class" strategy="beforeInteractive">
+          {`document.documentElement.classList.add('js')`}
+        </Script>
         <NextIntlClientProvider>
           <SmoothScroll>
             <Nav locale={locale} />
