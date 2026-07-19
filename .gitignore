@@ -6,7 +6,6 @@ docs/
 /node_modules
 /out/
 .env*
-!.env.example
 /coverage
 *.tsbuildinfo
 .vercel

@@ -181,26 +181,6 @@
     "intro": "Imate ideju za projekat? Popričajmo — bez pritiska, bez računa.",
     "consult": "Prvih 30 minuta je besplatan poziv, bez obaveze.",
     "emailLabel": "Email",
-    "phoneLabel": "Telefon",
-    "form": {
-      "name": "Ime",
-      "email": "Email",
-      "message": "Poruka",
-      "messagePlaceholder": "Nekoliko rečenica o vašem projektu…",
-      "honeypotLabel": "Ostavite ovo polje prazno",
-      "submit": "Pošalji poruku",
-      "sending": "Slanje…",
-      "success": "Poruka je poslata — javljam se uskoro.",
-      "errors": {
-        "validation": "Proverite polja ispod i pokušajte ponovo.",
-        "unavailable": "Forma trenutno ne prima poruke — pišite direktno na email.",
-        "failed": "Nešto je pošlo naopako. Pokušajte ponovo ili pišite direktno na email."
-      },
-      "fieldErrors": {
-        "name": "Ime mora imati bar 2 karaktera.",
-        "email": "Unesite ispravnu email adresu.",
-        "message": "Poruka mora imati bar 10 karaktera."
-      }
-    }
+    "phoneLabel": "Telefon"
   }
 }
