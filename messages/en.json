@@ -6,7 +6,8 @@
     "contact": "Contact"
   },
   "sections": {
-    "hero": "Hero"
+    "hero": "Hero",
+    "about": "About"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -14,5 +15,36 @@
     "nameLast": "Radivojević",
     "tagline": "I build tools that work — not just websites.",
     "cta": "View work"
+  },
+  "about": {
+    "bio": "Full-stack developer based in Leskovac, Serbia. I build sites and web applications that do actual work — not just a showcase, but tools that sell, book, and keep records. Open to remote work and clients across the EU.",
+    "tags": {
+      "t1": "Full-stack",
+      "t2": "Leskovac, RS",
+      "t3": "Remote & EU"
+    },
+    "stats": {
+      "s1": { "value": "24", "label": "Automated tests" },
+      "s2": { "value": "~9,700", "label": "Lines of code in production" },
+      "s3": { "value": "21+", "label": "Pages in one system" }
+    },
+    "foundations": {
+      "f1": {
+        "title": "A tool, not a storefront",
+        "body": "I don't build sites that just sit on the internet — I build tools that sell, book, and do the work for you, 24 hours a day."
+      },
+      "f2": {
+        "title": "You own it",
+        "body": "The code, content, and data are yours from day one — no lock-in to a platform or an agency."
+      },
+      "f3": {
+        "title": "I don't vanish after payment",
+        "body": "Maintenance isn't an afterthought — I'm still here after launch, with a support plan that keeps the app running."
+      },
+      "f4": {
+        "title": "Real software, tested",
+        "body": "Automated tests, secure architecture, and code built to survive real use — not a prototype, a production system."
+      }
+    }
   }
 }

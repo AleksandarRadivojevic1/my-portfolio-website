@@ -6,7 +6,8 @@
     "contact": "Kontakt"
   },
   "sections": {
-    "hero": "Hero"
+    "hero": "Hero",
+    "about": "About"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -14,5 +15,36 @@
     "nameLast": "Radivojević",
     "tagline": "Pravim alate koji rade — ne samo sajtove.",
     "cta": "Vidi radove"
+  },
+  "about": {
+    "bio": "Fulstek programer iz Leskovca. Gradim sajtove i veb aplikacije koje rade posao — od izloga koji privlači poglede, do alata koji prodaje, zakazuje i vodi evidenciju. Otvoren za saradnju sa lokalnim biznisima i klijentima iz inostranstva.",
+    "tags": {
+      "t1": "Fulstek",
+      "t2": "Leskovac, RS",
+      "t3": "Remote & EU"
+    },
+    "stats": {
+      "s1": { "value": "24", "label": "Automatizovanih testova" },
+      "s2": { "value": "~9.700", "label": "Linija koda u produkciji" },
+      "s3": { "value": "21+", "label": "Strana u jednom sistemu" }
+    },
+    "foundations": {
+      "f1": {
+        "title": "Alat, ne izlog",
+        "body": "Ne pravim sajtove koji samo stoje na internetu — pravim alate koji prodaju, zakazuju i rade posao za vas, 24 časa dnevno."
+      },
+      "f2": {
+        "title": "Vi ste vlasnik",
+        "body": "Kod, sadržaj i podaci su vaši od prvog dana — bez zaključavanja kod platforme ili agencije."
+      },
+      "f3": {
+        "title": "Ne nestajem posle uplate",
+        "body": "Održavanje nije naknadna misao — tu sam i posle lansiranja, sa planom podrške koji drži aplikaciju u pogonu."
+      },
+      "f4": {
+        "title": "Pravi softver, testiran",
+        "body": "Automatizovano testiranje, bezbedna arhitektura i kod pisan da izdrži realnu upotrebu — ne prototip, već proizvodni sistem."
+      }
+    }
   }
 }
