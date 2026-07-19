@@ -7,7 +7,8 @@
   },
   "sections": {
     "hero": "Hero",
-    "about": "About"
+    "about": "About",
+    "services": "Services"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -46,5 +47,113 @@
         "body": "Automatizovano testiranje, bezbedna arhitektura i kod pisan da izdrži realnu upotrebu — ne prototip, već proizvodni sistem."
       }
     }
+  },
+  "services": {
+    "intro": "Fokus je na rezultatu i vlasništvu — ne na utrci cenama.",
+    "compare": {
+      "title": "Sajt ili web aplikacija?",
+      "site": "Sajt (izlog)",
+      "app": "Web aplikacija (radnik)",
+      "rows": {
+        "does": {
+          "label": "Šta radi",
+          "site": "Prikazuje informacije",
+          "app": "Obavlja posao — prodaja, termini, nalozi"
+        },
+        "visitor": {
+          "label": "Posetilac može da",
+          "site": "Čita, gleda galeriju, pozove",
+          "app": "Poruči, plati, zakaže termin, napravi nalog"
+        },
+        "gets": {
+          "label": "Vi dobijate",
+          "site": "Vidljivost na Google-u, poverenje",
+          "app": "Admin panel: kontrola nad porudžbinama i terminima"
+        },
+        "example": {
+          "label": "Primer",
+          "site": "Sajt restorana sa menijem i mapom",
+          "app": "Onlajn prodavnica sa korpom i zakazivanjem"
+        },
+        "scope": {
+          "label": "Obim",
+          "site": "Nekoliko dana do dve nedelje",
+          "app": "Više nedelja do više meseci"
+        }
+      }
+    },
+    "packages": {
+      "title": "Paketi",
+      "includesLabel": "Uključuje",
+      "note": "Uključeno u svaku cenu: podešavanje servera, povezivanje domena, osnovni SEO (Google Maps profil) i obuka.",
+      "start": {
+        "name": "START — mini sajt",
+        "includes": "1–3 strane; ko ste, usluge, galerija, kontakt, mapa, poziv; mobilno",
+        "idealFor": "Zanatlije i male firme kojima treba vidljivost na internetu"
+      },
+      "standard": {
+        "name": "STANDARD — pun sajt",
+        "includes": "5–10 strana; cenovnik, galerija, o nama, forma, dvojezično, osnovni SEO",
+        "idealFor": "Firme koje žele kompletan, profesionalan nastup"
+      },
+      "plus": {
+        "name": "PLUS — sa zakazivanjem",
+        "includes": "Sve iz Standard + onlajn zakazivanje sa automatskim podsetnicima (email/SMS)",
+        "idealFor": "Salone, ordinacije i usluge koje žive od termina"
+      },
+      "app": {
+        "name": "WEB APLIKACIJA — po meri",
+        "includes": "Onlajn prodavnica, nalozi, admin panel ili sistem po meri",
+        "idealFor": "Biznise kojima treba sistem koji radi posao, ne samo izlog"
+      }
+    },
+    "maintenance": {
+      "title": "Održavanje",
+      "tagline": "Da aplikacija radi bez prekida — deo dogovora, ne naknadna opcija.",
+      "tier": "Nivo",
+      "month": "Mesečno",
+      "year": "Godišnje",
+      "site": "Sajt (Start/Standard/Plus)",
+      "app": "Web aplikacija"
+    },
+    "process": {
+      "title": "Kako izgleda saradnja",
+      "talk": {
+        "title": "Razgovor",
+        "body": "30 minuta, besplatno i bez obaveze."
+      },
+      "offer": {
+        "title": "Pisana ponuda",
+        "body": "Tačna cena, obim posla i rok — bez skrivenih troškova."
+      },
+      "build": {
+        "title": "Izrada",
+        "body": "50% avansno, 50% po završetku, uz redovne izveštaje o napretku."
+      },
+      "launch": {
+        "title": "Puštanje u rad i obuka",
+        "body": "Lansiranje, obuka za korišćenje i podešavanje Google profila."
+      },
+      "maintain": {
+        "title": "Održavanje",
+        "body": "Kontinuirana podrška i izmene posle lansiranja."
+      }
+    },
+    "faq": {
+      "title": "Česta pitanja",
+      "social": {
+        "question": "Imam Facebook/Instagram — zašto mi treba sajt?",
+        "answer": "Društvene mreže su iznajmljen prostor i ne rangiraju se na Google-u. Sajt je vaše vlasništvo i gradi poverenje od prvog utiska."
+      },
+      "outdated": {
+        "question": "Već imam sajt, ali je zastareo.",
+        "answer": "Redizajn se naplaćuje kao odgovarajući paket (obično Standard), a postojeći sadržaj se može preneti."
+      },
+      "duration": {
+        "question": "Koliko traje izrada?",
+        "answer": "Start: oko nedelju dana · Standard: 2–3 nedelje · Plus: 3–4 nedelje · Web aplikacija: rok se određuje po projektu."
+      }
+    },
+    "cta": "Započni projekat"
   }
 }

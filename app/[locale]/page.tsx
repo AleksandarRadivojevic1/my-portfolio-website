@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Services } from "@/components/sections/Services";
 
 type HomeProps = {
   params: Promise<{ locale: string }>;
@@ -14,7 +15,8 @@ export default async function Home({ params }: HomeProps) {
     <main>
       <Hero />
       <About />
-      {/* Tasks 9–11 append Services / Work / Contact sections here. */}
+      <Services />
+      {/* Tasks 10–11 append Work / Contact sections here. */}
     </main>
   );
 }
