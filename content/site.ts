@@ -2,6 +2,7 @@
 // Prose/labels for these values live in messages/*.json (e.g. "contact.emailLabel").
 
 export interface SiteInfo {
+  name: string;
   email: string;
   phone: string;
   location: string;
@@ -9,6 +10,7 @@ export interface SiteInfo {
 }
 
 export const SITE: SiteInfo = {
+  name: 'Aleksandar Radivojević',
   email: 'aradivojevic.dev@outlook.com',
   phone: '061 230 8522',
   location: 'Leskovac, RS',

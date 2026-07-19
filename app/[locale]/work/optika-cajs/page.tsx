@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { CaseCajs } from '@/components/work/CaseCajs';
+import { buildMetadata, type Locale } from '@/lib/seo';
 
 type CaseCajsPageProps = {
   params: Promise<{ locale: string }>;
@@ -13,12 +14,7 @@ type CaseCajsPageProps = {
 // set instead of redeclaring generateStaticParams itself.
 export async function generateMetadata({ params }: CaseCajsPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'caseCajs.meta' });
-
-  return {
-    title: t('title'),
-    description: t('description'),
-  };
+  return buildMetadata(locale as Locale, '/work/optika-cajs');
 }
 
 export default async function OptikaCajsPage({ params }: CaseCajsPageProps) {
