@@ -170,7 +170,25 @@
       "label": "Product",
       "title": "Skedio",
       "summary": "A booking SaaS built for salons, clinics, spas, and gyms. A product in progress, outside client work.",
-      "liveLabel": "View live"
+      "liveLabel": "View live",
+      "landingLabel": "Landing",
+      "appLabel": "Open app"
+    },
+    "desktop": {
+      "menuBrand": "ALEXRAD // OS",
+      "builtTitle": "What was built",
+      "specsTitle": "Specs",
+      "stackTitle": "Stack",
+      "liveLabel": "Live site",
+      "caseCta": "Open full case study →",
+      "lockedTitle": "Encrypted",
+      "lockedBody": "// in development",
+      "stat": {
+        "pages": "Pages",
+        "tests": "Tests",
+        "marketValue": "Market value",
+        "effort": "Effort"
+      }
     },
     "testimonial": {
       "kicker": "Testimonial",

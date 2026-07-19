@@ -79,3 +79,47 @@ export const SKEDIO: WorkItem = {
   id: 'skedio',
   stack: [],
 };
+
+// --- Desktop-OS Work section --------------------------------------------
+// Structural descriptors for the interactive desktop. Copy (folder labels,
+// summaries, link labels) lives in messages/*.json under `work.*`. Optika's
+// specs/features are pulled from CAJS above; Skedio ships summary + links
+// only until real specs exist (no fabricated stats). CONFIDENTIAL GUARD
+// still applies — never put Optika confidential figures here.
+
+export type DesktopKind = 'case' | 'product' | 'locked';
+
+export interface DesktopLink {
+  /** Full message key path, e.g. 'work.skedio.landingLabel'. */
+  labelKey: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface DesktopProject {
+  id: string;
+  kind: DesktopKind;
+  /** Start position within the desktop, as viewport-relative percentages. */
+  start: { x: number; y: number };
+  links?: DesktopLink[];
+}
+
+export const DESKTOP_PROJECTS: DesktopProject[] = [
+  {
+    id: 'optika-cajs',
+    kind: 'case',
+    start: { x: 16, y: 24 },
+    links: [{ labelKey: 'work.desktop.liveLabel', href: 'https://optikacajs.rs', external: true }],
+  },
+  {
+    id: 'skedio',
+    kind: 'product',
+    start: { x: 44, y: 42 },
+    links: [
+      { labelKey: 'work.skedio.landingLabel', href: 'https://skedio.rs', external: true },
+      { labelKey: 'work.skedio.appLabel', href: 'https://app.skedio.rs', external: true },
+    ],
+  },
+  { id: 'soon-1', kind: 'locked', start: { x: 70, y: 26 } },
+  { id: 'soon-2', kind: 'locked', start: { x: 60, y: 62 } },
+];

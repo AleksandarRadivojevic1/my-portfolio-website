@@ -170,7 +170,25 @@
       "label": "Proizvod",
       "title": "Skedio",
       "summary": "SaaS za onlajn zakazivanje, napravljen za salone, ordinacije, spa centre i teretane. Proizvod u razvoju, van klijentskih projekata.",
-      "liveLabel": "Pogledaj uživo"
+      "liveLabel": "Pogledaj uživo",
+      "landingLabel": "Sajt",
+      "appLabel": "Otvori aplikaciju"
+    },
+    "desktop": {
+      "menuBrand": "ALEXRAD // OS",
+      "builtTitle": "Šta je napravljeno",
+      "specsTitle": "Specifikacije",
+      "stackTitle": "Tehnologije",
+      "liveLabel": "Sajt uživo",
+      "caseCta": "Otvori celu studiju slučaja →",
+      "lockedTitle": "Šifrovano",
+      "lockedBody": "// u izradi",
+      "stat": {
+        "pages": "Stranice",
+        "tests": "Testovi",
+        "marketValue": "Tržišna vrednost",
+        "effort": "Uloženo"
+      }
     },
     "testimonial": {
       "kicker": "Izjava",

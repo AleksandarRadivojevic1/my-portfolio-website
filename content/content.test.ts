@@ -1,8 +1,8 @@
-import { CAJS } from './work';
+import { CAJS, DESKTOP_PROJECTS } from './work';
 import { PACKAGES, MAINTENANCE } from './services';
 
 test('no confidential figures in content', () => {
-  const blob = JSON.stringify({ CAJS, PACKAGES, MAINTENANCE });
+  const blob = JSON.stringify({ CAJS, PACKAGES, MAINTENANCE, DESKTOP_PROJECTS });
   expect(blob).not.toContain('€500'); // Cajs confidential one-time
   expect(blob).not.toContain('€40'); // founding maintenance (also covers €400)
 });
@@ -20,4 +20,27 @@ test('cajs public market value present', () => {
 test('four packages with prices', () => {
   expect(PACKAGES.map((p) => p.id)).toEqual(['start', 'standard', 'plus', 'app']);
   expect(PACKAGES[3].priceLabel).toBe('od €3.000');
+});
+
+test('desktop projects: four folders in expected order', () => {
+  expect(DESKTOP_PROJECTS.map((p) => p.id)).toEqual([
+    'optika-cajs',
+    'skedio',
+    'soon-1',
+    'soon-2',
+  ]);
+});
+
+test('desktop projects: skedio exposes landing + app links', () => {
+  const skedio = DESKTOP_PROJECTS.find((p) => p.id === 'skedio');
+  expect(skedio?.links?.map((l) => l.href)).toEqual([
+    'https://skedio.rs',
+    'https://app.skedio.rs',
+  ]);
+});
+
+test('desktop projects: no confidential figures', () => {
+  const blob = JSON.stringify(DESKTOP_PROJECTS);
+  expect(blob).not.toContain('€500');
+  expect(blob).not.toContain('€40');
 });
