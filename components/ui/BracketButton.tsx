@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, ComponentType, ElementType, ReactNode } from 'react';
 
 type BracketButtonProps = {
   href?: string;
@@ -17,7 +17,13 @@ export function BracketButton({
   className = '',
   ...rest
 }: BracketButtonProps) {
-  const Comp = as ?? 'a';
+  // A bare `ElementType` is a union of every possible tag/component, so JSX
+  // intersects their props and collapses `children`/`href` to `never`. Every
+  // caller renders an anchor-shaped target (the default `<a>` or `as={Link}`),
+  // so we pin `Comp` to a single concrete anchor-props component. That keeps
+  // the component polymorphic while giving the JSX below one prop shape to
+  // check against — href, className, children and the spread `...rest` all fit.
+  const Comp = (as ?? 'a') as ComponentType<ComponentPropsWithoutRef<'a'>>;
 
   return (
     <Comp

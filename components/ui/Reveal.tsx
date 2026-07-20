@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useSyncExternalStore } from 'react';
-import type { ElementType, ReactNode } from 'react';
+import type { ComponentType, ElementType, ReactNode } from 'react';
 
 type RevealProps = {
   children: ReactNode;
@@ -46,7 +46,10 @@ export function Reveal({ children, as = 'div', delay = 0 }: RevealProps) {
   const Comp = as;
 
   if (shouldReduceMotion) {
-    return <Comp>{children}</Comp>;
+    // A bare `ElementType` collapses the `children` prop to `never` in JSX, so
+    // pin it to a single concrete component that accepts children.
+    const Static = Comp as ComponentType<{ children?: ReactNode }>;
+    return <Static>{children}</Static>;
   }
 
   const MotionComp = motion[Comp as keyof typeof motion] as typeof motion.div;
