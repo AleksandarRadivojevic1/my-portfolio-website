@@ -9,11 +9,15 @@ type NavProps = {
 export function Nav({ locale }: NavProps) {
   const t = useTranslations('nav');
 
+  // Home-anchored (`/#id`), not bare `#id`: bare hashes resolve against the
+  // *current* path, so from a `/work/...` route they'd produce
+  // `/work/optika-cajs#work` and go nowhere. Routing to the localized home +
+  // hash makes each link work from any page — as a client-side navigation.
   const links: Array<{ href: string; label: string }> = [
-    { href: '#about', label: t('about') },
-    { href: '#work', label: t('work') },
-    { href: '#services', label: t('services') },
-    { href: '#contact', label: t('contact') },
+    { href: '/#about', label: t('about') },
+    { href: '/#work', label: t('work') },
+    { href: '/#services', label: t('services') },
+    { href: '/#contact', label: t('contact') },
   ];
 
   return (
@@ -25,9 +29,9 @@ export function Nav({ locale }: NavProps) {
         <ul className="hidden items-center gap-8 font-mono text-xs uppercase tracking-[0.2em] text-muted sm:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition-colors hover:text-accent">
+              <Link href={link.href} className="transition-colors hover:text-accent">
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef } from 'react';
 import type { KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerEvent } from 'react';
+import { Link } from '@/i18n/navigation';
 
 export interface WindowLink {
   label: string;
@@ -201,12 +202,15 @@ export function ProjectWindow({
               </a>
             ))}
             {content.caseHref && (
-              <a
+              // Internal case-study route → client-side navigation (no full
+              // reload, so the shared layout stays mounted and the boot
+              // preloader never replays). External links above stay plain <a>.
+              <Link
                 href={content.caseHref}
                 className="border border-accent px-4 py-2 font-mono text-xs text-accent hover:bg-accent hover:text-bg focus-visible:outline focus-visible:outline-1 focus-visible:outline-accent"
               >
                 {content.caseCta}
-              </a>
+              </Link>
             )}
           </section>
         )}

@@ -3,6 +3,17 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Desktop } from '../Desktop';
 import messages from '@/messages/en.json';
 
+// ProjectWindow's case-study link uses next-intl's <Link> (next/navigation),
+// which vitest can't resolve under jsdom; stub it with a plain <a> that keeps
+// the raw href (same pattern as CaseSkedio.render.test.tsx).
+vi.mock('@/i18n/navigation', () => ({
+  Link: ({ href, children, ...rest }: { href: string; children: React.ReactNode }) => (
+    <a href={typeof href === 'string' ? href : String(href)} {...rest}>
+      {children}
+    </a>
+  ),
+}));
+
 function setMatchMedia(matches: boolean) {
   window.matchMedia = ((q: string) => ({
     matches,
