@@ -26,11 +26,6 @@
       "t2": "Leskovac, RS",
       "t3": "Remote & EU"
     },
-    "stats": {
-      "s1": { "value": "24", "label": "Automated tests" },
-      "s2": { "value": "~9,700", "label": "Lines of code in production" },
-      "s3": { "value": "21+", "label": "Pages in one system" }
-    },
     "foundations": {
       "f1": {
         "title": "A tool, not a storefront",

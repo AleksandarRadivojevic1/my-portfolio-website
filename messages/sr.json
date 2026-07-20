@@ -26,11 +26,6 @@
       "t2": "Leskovac, RS",
       "t3": "Remote & EU"
     },
-    "stats": {
-      "s1": { "value": "24", "label": "Automatizovanih testova" },
-      "s2": { "value": "~9.700", "label": "Linija koda u produkciji" },
-      "s3": { "value": "21+", "label": "Strana u jednom sistemu" }
-    },
     "foundations": {
       "f1": {
         "title": "Alat, ne izlog",

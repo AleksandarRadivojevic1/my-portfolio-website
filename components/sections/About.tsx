@@ -3,7 +3,6 @@ import { SectionCounter } from '@/components/ui/SectionCounter';
 import { Reveal } from '@/components/ui/Reveal';
 
 const TAG_KEYS = ['t1', 't2', 't3'] as const;
-const STAT_KEYS = ['s1', 's2', 's3'] as const;
 const FOUNDATION_KEYS = ['f1', 'f3', 'f4'] as const;
 
 export function About() {
@@ -19,25 +18,10 @@ export function About() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-24">
         <SectionCounter index={1} labelKey="sections.about" />
 
-        {/* Lead statement + stats, asymmetric. */}
-        <div className="grid gap-14 md:grid-cols-[1.5fr_1fr] md:gap-20">
-          <p className="max-w-2xl text-2xl font-light leading-[1.35] text-fg sm:text-3xl">
-            {t('bio')}
-          </p>
-
-          <dl className="flex flex-col justify-end gap-8">
-            {STAT_KEYS.map((key) => (
-              <div key={key} className="flex flex-col gap-1">
-                <dd className="font-display text-4xl leading-none text-fg sm:text-5xl">
-                  {t(`stats.${key}.value`)}
-                </dd>
-                <dt className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted">
-                  {t(`stats.${key}.label`)}
-                </dt>
-              </div>
-            ))}
-          </dl>
-        </div>
+        {/* Lead statement. */}
+        <p className="max-w-3xl text-2xl font-light leading-[1.35] text-fg sm:text-3xl">
+          {t('bio')}
+        </p>
 
         {/* Metadata line — no boxed pills. */}
         <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted">
