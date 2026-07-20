@@ -16,38 +16,33 @@
     "role": "Full-Stack Developer · Leskovac, RS",
     "nameFirst": "Aleksandar",
     "nameLast": "Radivojević",
-    "tagline": "Pravim alate koji rade — ne samo sajtove.",
+    "tagline": "Pravim alate koji rade, ne samo sajtove.",
     "cta": "Vidi radove"
   },
   "about": {
-    "bio": "Fulstek programer iz Leskovca. Gradim sajtove i veb aplikacije koje rade posao — od izloga koji privlači poglede, do alata koji prodaje, zakazuje i vodi evidenciju. Otvoren za saradnju sa lokalnim biznisima i klijentima iz inostranstva.",
+    "bio": "Full-stack programer iz Leskovca. Razvijam sajtove i veb aplikacije koje pomažu biznisima da rastu: od atraktivnih prezentacija do sistema za prodaju, zakazivanje i automatizaciju poslovanja. Saradnja sa lokalnim i međunarodnim klijentima.",
     "tags": {
       "t1": "Fulstek",
       "t2": "Leskovac, RS",
       "t3": "Remote & EU"
     },
-    "stats": {
-      "s1": { "value": "24", "label": "Automatizovanih testova" },
-      "s2": { "value": "~9.700", "label": "Linija koda u produkciji" },
-      "s3": { "value": "21+", "label": "Strana u jednom sistemu" }
-    },
     "foundations": {
       "f1": {
         "title": "Alat, ne izlog",
-        "body": "Ne pravim sajtove koji samo stoje na internetu — pravim alate koji prodaju, zakazuju i rade posao za vas, 24 časa dnevno."
+        "body": "Ne pravim sajtove koji samo stoje na internetu. Pravim alate koji prodaju, zakazuju i rade posao za vas, 24 časa dnevno."
       },
       "f3": {
         "title": "Ne nestajem posle uplate",
-        "body": "Održavanje nije naknadna misao — tu sam i posle lansiranja, sa planom podrške koji drži aplikaciju u pogonu."
+        "body": "Održavanje nije naknadna misao. Tu sam i posle lansiranja, sa planom podrške koji drži aplikaciju u pogonu."
       },
       "f4": {
         "title": "Pravi softver, testiran",
-        "body": "Automatizovano testiranje, bezbedna arhitektura i kod pisan da izdrži realnu upotrebu — ne prototip, već proizvodni sistem."
+        "body": "Automatizovano testiranje, bezbedna arhitektura i kod pisan da izdrži realnu upotrebu. Ne prototip, već proizvodni sistem."
       }
     }
   },
   "services": {
-    "intro": "Fokus je na rezultatu i vlasništvu — ne na utrci cenama.",
+    "intro": "Fokus je na rezultatu i vlasništvu, ne na utrci cenama.",
     "compare": {
       "title": "Sajt ili web aplikacija?",
       "site": "Sajt (izlog)",
@@ -56,7 +51,7 @@
         "does": {
           "label": "Šta radi",
           "site": "Prikazuje informacije",
-          "app": "Obavlja posao — prodaja, termini, nalozi"
+          "app": "Obavlja posao: prodaja, termini, nalozi"
         },
         "visitor": {
           "label": "Posetilac može da",
@@ -85,29 +80,29 @@
       "includesLabel": "Uključuje",
       "note": "Uključeno u svaku cenu: podešavanje servera, povezivanje domena, osnovni SEO (Google Maps profil) i obuka.",
       "start": {
-        "name": "START — mini sajt",
+        "name": "START: mini sajt",
         "includes": "1–3 strane; ko ste, usluge, galerija, kontakt, mapa, poziv; mobilno",
         "idealFor": "Zanatlije i male firme kojima treba vidljivost na internetu"
       },
       "standard": {
-        "name": "STANDARD — pun sajt",
+        "name": "STANDARD: pun sajt",
         "includes": "5–10 strana; cenovnik, galerija, o nama, forma, dvojezično, osnovni SEO",
         "idealFor": "Firme koje žele kompletan, profesionalan nastup"
       },
       "plus": {
-        "name": "PLUS — sa zakazivanjem",
+        "name": "PLUS: sa zakazivanjem",
         "includes": "Sve iz Standard + onlajn zakazivanje sa automatskim podsetnicima (email/SMS)",
         "idealFor": "Salone, ordinacije i usluge koje žive od termina"
       },
       "app": {
-        "name": "WEB APLIKACIJA — po meri",
+        "name": "WEB APLIKACIJA: po meri",
         "includes": "Onlajn prodavnica, nalozi, admin panel ili sistem po meri",
         "idealFor": "Biznise kojima treba sistem koji radi posao, ne samo izlog"
       }
     },
     "maintenance": {
       "title": "Održavanje",
-      "tagline": "Da aplikacija radi bez prekida — deo dogovora, ne naknadna opcija.",
+      "tagline": "Da aplikacija radi bez prekida, deo dogovora, ne naknadna opcija.",
       "tier": "Nivo",
       "month": "Mesečno",
       "year": "Godišnje",
@@ -122,7 +117,7 @@
       },
       "offer": {
         "title": "Pisana ponuda",
-        "body": "Tačna cena, obim posla i rok — bez skrivenih troškova."
+        "body": "Tačna cena, obim posla i rok. Bez skrivenih troškova."
       },
       "build": {
         "title": "Izrada",
@@ -140,7 +135,7 @@
     "faq": {
       "title": "Česta pitanja",
       "social": {
-        "question": "Imam Facebook/Instagram — zašto mi treba sajt?",
+        "question": "Imam Facebook/Instagram, pa zašto mi treba sajt?",
         "answer": "Društvene mreže su iznajmljen prostor i ne rangiraju se na Google-u. Sajt je vaše vlasništvo i gradi poverenje od prvog utiska."
       },
       "outdated": {
@@ -155,11 +150,11 @@
     "cta": "Započni projekat"
   },
   "work": {
-    "intro": "Dubina umesto širine — dva projekta koja govore više od deset u nizu.",
+    "intro": "Dubina umesto širine: dva projekta koja govore više od deset u nizu.",
     "cajs": {
-      "role": "Samostalna izrada — od ideje do produkcije",
+      "role": "Samostalna izrada, od ideje do produkcije",
       "title": "Optika Cajs",
-      "summary": "Kompletan onlajn sistem za jednu lokalnu optiku — prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda na jednom mestu. Ne izlog koji stoji na internetu, već alat koji prodaje i zakazuje 24 časa dnevno.",
+      "summary": "Kompletan onlajn sistem za jednu lokalnu optiku: prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda na jednom mestu. Ne izlog koji stoji na internetu, već alat koji prodaje i zakazuje 24 časa dnevno.",
       "cta": "Pogledaj studiju slučaja"
     },
     "skedio": {
@@ -192,22 +187,22 @@
     }
   },
   "contact": {
-    "intro": "Imate ideju za projekat? Popričajmo — bez pritiska, bez računa.",
+    "intro": "Imate ideju za projekat? Popričajmo. Bez pritiska, bez računa.",
     "consult": "Prvih 30 minuta je besplatan poziv, bez obaveze.",
     "emailLabel": "Email",
     "phoneLabel": "Telefon"
   },
   "caseCajs": {
     "meta": {
-      "title": "Optika Cajs — Studija slučaja",
-      "description": "Kompletan onlajn sistem za lokalnu optiku — prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno i vođeno do produkcije samostalno."
+      "title": "Optika Cajs: Studija slučaja",
+      "description": "Kompletan onlajn sistem za lokalnu optiku: prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno i vođeno do produkcije samostalno."
     },
     "hero": {
       "kicker": "Studija slučaja",
       "title": "Optika Cajs",
-      "tagline": "Kompletan onlajn sistem za lokalnu optiku — prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno od nule i vođeno do produkcije samostalno.",
+      "tagline": "Kompletan onlajn sistem za lokalnu optiku: prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno od nule i vođeno do produkcije samostalno.",
       "liveLabel": "Pogledaj sajt uživo",
-      "backLabel": "Nazad na Work"
+      "backLabel": "Nazad na radove"
     },
     "sections": {
       "challenge": "Izazov",
@@ -218,16 +213,16 @@
       "testimonial": "Izjava"
     },
     "challenge": {
-      "body": "Optika Cajs je imala fizičku radnju i osnovni sajt-vizitkarticu — bez mogućnosti prodaje, zakazivanja ili konfigurisanja dioptrijskih stakala na mreži. Svaki upit je značio telefonski poziv ili dolazak u radnju. Cilj je bio sistem koji radi posao i van radnog vremena: prodaje, zakazuje i vodi evidenciju bez dodatnog osoblja."
+      "body": "Optika Cajs je imala fizičku radnju, ali nikakvo onlajn prisustvo: bez prodaje, zakazivanja ili konfigurisanja dioptrijskih stakala na mreži. Svaki upit je značio telefonski poziv ili dolazak u radnju. Cilj je bio sistem koji radi posao i van radnog vremena: prodaje, zakazuje i vodi evidenciju bez dodatnog osoblja."
     },
     "features": {
       "shop": {
         "title": "Onlajn prodavnica",
-        "body": "Kompletna prodavnica naočara i sočiva sa kategorijama, pretragom i korpom — spremna za realnu prodaju, ne samo katalog."
+        "body": "Kompletna prodavnica naočara i sočiva sa kategorijama, pretragom i korpom, spremna za realnu prodaju, ne samo katalog."
       },
       "configurator": {
         "title": "Konfigurator dioptrijskih stakala",
-        "body": "Korak-po-korak izbor jačine, tipa stakla i dodataka, sa cenom koja se ažurira uživo — najsloženiji deo sistema."
+        "body": "Korak-po-korak izbor jačine, tipa stakla i dodataka, sa cenom koja se ažurira uživo, najsloženiji deo sistema."
       },
       "accounts": {
         "title": "Nalozi kupaca",
@@ -235,7 +230,7 @@
       },
       "booking": {
         "title": "Zakazivanje pregleda",
-        "body": "Onlajn zakazivanje termina za pregled vida, sa potvrdom i podsetnicima — bez telefonskih poziva."
+        "body": "Onlajn zakazivanje termina za pregled vida, sa potvrdom i podsetnicima, bez telefonskih poziva."
       },
       "admin": {
         "title": "Administratorski panel",
@@ -247,17 +242,17 @@
       },
       "testing": {
         "title": "Automatizovano testiranje",
-        "body": "24 automatizovana testa pokrivaju kritične tokove — prodaju, konfigurator i zakazivanje — pre svakog objavljivanja."
+        "body": "24 automatizovana testa pokrivaju kritične tokove (prodaju, konfigurator i zakazivanje) pre svakog objavljivanja."
       },
       "responsive": {
         "title": "Responzivan dizajn",
-        "body": "Isto iskustvo na telefonu, tabletu i računaru — većina kupaca dolazi sa mobilnog."
+        "body": "Isto iskustvo na telefonu, tabletu i računaru. Većina kupaca dolazi sa mobilnog."
       }
     },
     "outcomes": {
       "sales": {
         "title": "Prodaja 24 časa dnevno",
-        "body": "Radnja sada prodaje i van radnog vremena — porudžbina ne čeka da se otvore vrata."
+        "body": "Radnja sada prodaje i van radnog vremena. Porudžbina ne čeka da se otvore vrata."
       },
       "booking": {
         "title": "Manje telefonskih poziva",
@@ -269,7 +264,7 @@
       },
       "ownership": {
         "title": "Puno vlasništvo",
-        "body": "Kod, sadržaj i podaci pripadaju Optici Cajs od prvog dana — bez zaključavanja kod agencije ili platforme."
+        "body": "Kod, sadržaj i podaci pripadaju Optici Cajs od prvog dana, bez zaključavanja kod agencije ili platforme."
       }
     },
     "stats": {
@@ -285,13 +280,13 @@
   },
   "caseSkedio": {
     "meta": {
-      "title": "Skedio — studija slučaja",
-      "description": "SaaS za zakazivanje i CRM koji pravim za srpske uslužne biznise — onlajn zakazivanje 24/7, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici, napravljen samostalno od nule."
+      "title": "Skedio: studija slučaja",
+      "description": "SaaS za zakazivanje i CRM koji pravim za srpske uslužne biznise: onlajn zakazivanje 24/7, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici, napravljen samostalno od nule."
     },
     "hero": {
       "kicker": "Studija slučaja",
       "title": "Skedio",
-      "tagline": "Platforma za zakazivanje i CRM za uslužne biznise u Srbiji — onlajn zakazivanje, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici. Proizvod koji pravim samostalno, od nule.",
+      "tagline": "Platforma za zakazivanje i CRM za uslužne biznise u Srbiji: onlajn zakazivanje, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici. Proizvod koji pravim samostalno, od nule.",
       "statusTag": "U aktivnom razvoju",
       "landingLabel": "Poseti sajt",
       "appLabel": "Otvori aplikaciju",
@@ -306,24 +301,24 @@
       "status": "Status i šta sledi"
     },
     "problem": {
-      "body": "Saloni, ordinacije, frizeri i teretane širom Srbije i dalje rade uz rokovnik i telefon koji stalno zvoni. Svaki propušten poziv je izgubljen termin, svako nedolaženje je mrtvo vreme, a strani alati za zakazivanje ignorišu kako se posao ovde zaista radi — mejl koji niko ne čita umesto WhatsApp-a, i radno vreme i navike koji se ne poklapaju. Skedio je pravljen baš za ovo tržište: termini se potvrđuju i podsećaju preko WhatsApp-a, jer se WhatsApp čita, a mejl čeka."
+      "body": "Saloni, ordinacije, frizeri i teretane širom Srbije i dalje rade uz rokovnik i telefon koji stalno zvoni. Svaki propušten poziv je izgubljen termin, svako nedolaženje je propalo vreme, a strani alati za zakazivanje ignorišu kako se posao ovde zaista radi: WhatsApp umesto mejla koji niko ne čita, i radno vreme i navike koji se ne poklapaju. Skedio je pravljen baš za ovo tržište: termini se potvrđuju i podsetnici stižu preko WhatsApp-a."
     },
     "features": {
-      "booking": { "title": "Onlajn zakazivanje 24/7", "body": "Javna stranica za zakazivanje za svaki biznis — klijenti sami biraju uslugu, radnika i termin i zakazuju, danju ili noću, bez ijednog poziva." },
+      "booking": { "title": "Onlajn zakazivanje 24/7", "body": "Javna stranica za zakazivanje za svaki biznis: klijenti sami biraju uslugu, radnika i termin i zakazuju, danju ili noću, bez ijednog poziva." },
       "calendar": { "title": "Timski kalendar", "body": "Nedeljni i mesečni prikaz termina svih članova tima, sa statusima u boji i zasivljenim završenim ili otkazanim terminima." },
       "crm": { "title": "Ugrađeni kartoni klijenata", "body": "Lagani CRM: istorija svakog klijenta na jednom mestu, sa objedinjavanjem po normalizovanom broju telefona da se isti klijent nikad ne razdvoji u dva kartona." },
       "staff": { "title": "Upravljanje osobljem", "body": "Dodaj članove tima, podesi im radno vreme i usluge, i svakom daj sopstveni kalendar i dostupnost." },
       "services": { "title": "Katalog usluga", "body": "Definiši usluge sa trajanjem i cenom; dostupnost i dužina termina računaju se automatski na osnovu njih." },
       "analytics": { "title": "Kontrolna tabla i analitika", "body": "Početna tabla sa terminima za taj dan i ključnim brojkama, tačno izračunatim prema lokalnom beogradskom danu." },
       "reminders": { "title": "Automatski WhatsApp podsetnici", "body": "Zakazani proces šalje WhatsApp podsetnike određeni broj sati pre termina, svaki sa linkom za otkazivanje u jednom dodiru." },
-      "onboarding": { "title": "Postavka za deset minuta", "body": "Čarobnjak pri prvom pokretanju vodi netehničkog vlasnika od registracije do žive stranice za zakazivanje za desetak minuta — bez uputstva i bez poziva za obuku." }
+      "onboarding": { "title": "Postavka za deset minuta", "body": "Čarobnjak pri prvom pokretanju vodi netehničkog vlasnika od registracije do žive stranice za zakazivanje za desetak minuta. Bez uputstva i bez poziva za obuku." }
     },
     "engineering": {
       "data": { "title": "Supabase + PostgreSQL", "body": "Autentikacija, podaci i pristup na nivou reda na Supabase Postgres-u, sa šemom vođenom kroz verzionisane migracije." },
       "billing": { "title": "Pretplate", "body": "Plaćeni planovi i naplata preko Lemon Squeezy-ja, tako da proizvod može da naplaćuje od prvog dana." },
       "whatsapp": { "title": "WhatsApp preko Twilio-a", "body": "Podsetnici se zakazuju u bazi i šalju preko cron endpointa kroz Twilio, uz praćenje statusa isporuke svake poruke." },
       "email": { "title": "Transakcioni mejlovi i nadzor", "body": "Mejlovi o zakazivanju i potvrdi preko Resend-a; greške i performanse prati Sentry i Vercel analitika." },
-      "timezone": { "title": "Ispravno vreme po dizajnu", "body": "Svako vreme se čuva u UTC-u i pretvara u Europe/Belgrade za prikaz i računanje termina — bez grešaka sa serverskim satom pri prelasku na letnje/zimsko vreme." },
+      "timezone": { "title": "Ispravno vreme po dizajnu", "body": "Svako vreme se čuva u UTC-u i pretvara u Europe/Belgrade za prikaz i računanje termina, bez grešaka sa serverskim satom pri prelasku na letnje/zimsko vreme." },
       "availability": { "title": "Motor dostupnosti", "body": "Slobodni termini se generišu sa buferom od 15 minuta oko svakog termina, uz zaštitu na nivou baze (exclusion constraint) da se dva termina nikad ne preklope." }
     },
     "stat": {
@@ -340,7 +335,7 @@
       "staff": "Skedio ekran za upravljanje osobljem"
     },
     "status": {
-      "body": "Skedio je u aktivnom razvoju i pred lansiranjem — aplikacija je napravljena i radi na app.skedio.rs, a marketinški sajt je iznova napravljen na Next.js-u. Sve sada vodi ka jednom cilju: prijave za besplatan probni period od vlasnika koji žele da prestanu da gube vreme na rokovnik. Kratkoročni plan je uvođenje pravih biznisa, istaknuti biznisi i doterivanje koje proizvod koji radi pretvara u onaj kome ljudi poveravaju svoje termine."
+      "body": "Skedio je u aktivnom razvoju i pred lansiranjem: aplikacija je napravljena i radi na app.skedio.rs, a marketinški sajt je iznova napravljen na Next.js-u. Sve sada vodi ka jednom cilju: prijave za besplatan probni period od vlasnika koji žele da prestanu da gube vreme na rokovnik. Kratkoročni plan je povećanje broja korisnika, istaknuti biznisi i doterivanje pouzdanosti i korisničkog iskustva."
     }
   }
 }

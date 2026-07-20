@@ -23,7 +23,7 @@ export function Nav({ locale }: NavProps) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-bg/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-mono text-sm font-bold tracking-[0.2em] text-fg">
+        <Link href="/#hero" className="font-mono text-sm font-bold tracking-[0.2em] text-fg">
           AR
         </Link>
         <ul className="hidden items-center gap-8 font-mono text-xs uppercase tracking-[0.2em] text-muted sm:flex">

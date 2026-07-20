@@ -12,7 +12,7 @@ export interface SiteInfo {
 export const SITE: SiteInfo = {
   name: 'Aleksandar Radivojević',
   email: 'aradivojevic.dev@outlook.com',
-  phone: '061 230 8522',
+  phone: '+381 61 2308 522',
   location: 'Leskovac, RS',
   domain: 'alexrad.dev',
 };

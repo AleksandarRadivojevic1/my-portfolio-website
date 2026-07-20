@@ -3,7 +3,7 @@ import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { SITE } from '@/content/site';
 
-export const alt = `${SITE.name} — Full-Stack Developer`;
+export const alt = `${SITE.name} · Full-Stack Developer`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

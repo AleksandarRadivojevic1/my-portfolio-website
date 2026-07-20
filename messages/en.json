@@ -16,38 +16,33 @@
     "role": "Full-Stack Developer · Leskovac, RS",
     "nameFirst": "Aleksandar",
     "nameLast": "Radivojević",
-    "tagline": "I build tools that work — not just websites.",
+    "tagline": "I build tools that work, not just websites.",
     "cta": "View work"
   },
   "about": {
-    "bio": "Full-stack developer based in Leskovac, Serbia. I build sites and web applications that do actual work — not just a showcase, but tools that sell, book, and keep records. Open to remote work and clients across the EU.",
+    "bio": "Full-stack developer based in Leskovac, Serbia. I build sites and web applications that help businesses grow: from eye-catching showcases to systems for sales, scheduling, and business automation. Working with local and international clients.",
     "tags": {
       "t1": "Full-stack",
       "t2": "Leskovac, RS",
       "t3": "Remote & EU"
     },
-    "stats": {
-      "s1": { "value": "24", "label": "Automated tests" },
-      "s2": { "value": "~9,700", "label": "Lines of code in production" },
-      "s3": { "value": "21+", "label": "Pages in one system" }
-    },
     "foundations": {
       "f1": {
         "title": "A tool, not a storefront",
-        "body": "I don't build sites that just sit on the internet — I build tools that sell, book, and do the work for you, 24 hours a day."
+        "body": "I don't build sites that just sit on the internet. I build tools that sell, book, and do the work for you, 24 hours a day."
       },
       "f3": {
         "title": "I don't vanish after payment",
-        "body": "Maintenance isn't an afterthought — I'm still here after launch, with a support plan that keeps the app running."
+        "body": "Maintenance isn't an afterthought. I'm still here after launch, with a support plan that keeps the app running."
       },
       "f4": {
         "title": "Real software, tested",
-        "body": "Automated tests, secure architecture, and code built to survive real use — not a prototype, a production system."
+        "body": "Automated tests, secure architecture, and code built to survive real use. Not a prototype, a production system."
       }
     }
   },
   "services": {
-    "intro": "Framed by outcome and ownership — not by price competition.",
+    "intro": "Framed by outcome and ownership, not by price competition.",
     "compare": {
       "title": "A website or a web app?",
       "site": "Website (storefront)",
@@ -56,7 +51,7 @@
         "does": {
           "label": "What it does",
           "site": "Displays information",
-          "app": "Does the work — sales, bookings, accounts"
+          "app": "Does the work: sales, bookings, accounts"
         },
         "visitor": {
           "label": "A visitor can",
@@ -85,29 +80,29 @@
       "includesLabel": "Includes",
       "note": "Included in every price: server setup, domain connection, basic SEO (Google Maps profile), and training.",
       "start": {
-        "name": "START — mini site",
+        "name": "START: mini site",
         "includes": "1–3 pages; who you are, services, gallery, contact, map, call button; mobile-ready",
         "idealFor": "Tradespeople and small businesses that need to be found online"
       },
       "standard": {
-        "name": "STANDARD — full site",
+        "name": "STANDARD: full site",
         "includes": "5–10 pages; pricing, gallery, about, contact form, bilingual, basic SEO",
         "idealFor": "Businesses that want a complete, professional presence"
       },
       "plus": {
-        "name": "PLUS — with booking",
+        "name": "PLUS: with booking",
         "includes": "Everything in Standard + online booking with automatic reminders (email/SMS)",
         "idealFor": "Salons, clinics, and services that live on appointments"
       },
       "app": {
-        "name": "WEB APP — custom-built",
+        "name": "WEB APP: custom-built",
         "includes": "An online shop, user accounts, admin panel, or a custom-built system",
         "idealFor": "Businesses that need a system that does the work, not just a storefront"
       }
     },
     "maintenance": {
       "title": "Maintenance",
-      "tagline": "Keeping the app running without interruption — built into the deal, not an optional add-on.",
+      "tagline": "Keeping the app running without interruption, built into the deal, not an optional add-on.",
       "tier": "Tier",
       "month": "Monthly",
       "year": "Yearly",
@@ -122,7 +117,7 @@
       },
       "offer": {
         "title": "Written offer",
-        "body": "Exact price, deliverables, and deadline — no hidden costs."
+        "body": "Exact price, deliverables, and deadline. No hidden costs."
       },
       "build": {
         "title": "Build",
@@ -140,7 +135,7 @@
     "faq": {
       "title": "Frequently asked questions",
       "social": {
-        "question": "I have Facebook/Instagram — why do I need a website?",
+        "question": "I have Facebook/Instagram, so why do I need a website?",
         "answer": "Social media is rented space and doesn't rank on Google. A website is your property and builds trust from the first visit."
       },
       "outdated": {
@@ -155,11 +150,11 @@
     "cta": "Start a project"
   },
   "work": {
-    "intro": "Depth over breadth — two projects that say more than ten in a row.",
+    "intro": "Depth over breadth: two projects that say more than ten in a row.",
     "cajs": {
-      "role": "Solo build — from idea to production",
+      "role": "Solo build, from idea to production",
       "title": "Optika Cajs",
-      "summary": "A complete online system for a local optical shop — an online store, a prescription-lens configurator, and eye-exam booking, all in one place. Not a storefront that just sits on the internet, but a tool that sells and books appointments 24 hours a day.",
+      "summary": "A complete online system for a local optical shop: an online store, a prescription-lens configurator, and eye-exam booking, all in one place. Not a storefront that just sits on the internet, but a tool that sells and books appointments 24 hours a day.",
       "cta": "View case study"
     },
     "skedio": {
@@ -192,22 +187,22 @@
     }
   },
   "contact": {
-    "intro": "Have a project in mind? Let's talk — no pressure, no invoice.",
+    "intro": "Have a project in mind? Let's talk. No pressure, no invoice.",
     "consult": "The first 30 minutes are a free, no-obligation call.",
     "emailLabel": "Email",
     "phoneLabel": "Phone"
   },
   "caseCajs": {
     "meta": {
-      "title": "Optika Cajs — Case Study",
-      "description": "A complete online system for a local optical shop — an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo."
+      "title": "Optika Cajs: Case Study",
+      "description": "A complete online system for a local optical shop: an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo."
     },
     "hero": {
       "kicker": "Case study",
       "title": "Optika Cajs",
-      "tagline": "A complete online system for a local optical shop — an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo.",
+      "tagline": "A complete online system for a local optical shop: an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo.",
       "liveLabel": "View live site",
-      "backLabel": "Back to Work"
+      "backLabel": "Back to work"
     },
     "sections": {
       "challenge": "Challenge",
@@ -218,16 +213,16 @@
       "testimonial": "Testimonial"
     },
     "challenge": {
-      "body": "Optika Cajs had a physical shop and a basic brochure site — no way to sell, book, or configure prescription lenses online. Every inquiry meant a phone call or a shop visit. The goal was a system that keeps working outside business hours: selling, booking, and keeping records without extra staff."
+      "body": "Optika Cajs had a physical shop but no online presence at all: no way to sell, book, or configure prescription lenses online. Every inquiry meant a phone call or a shop visit. The goal was a system that keeps working outside business hours: selling, booking, and keeping records without extra staff."
     },
     "features": {
       "shop": {
         "title": "Online store",
-        "body": "A full glasses-and-lenses store with categories, search, and a cart — built to actually sell, not just display a catalog."
+        "body": "A full glasses-and-lenses store with categories, search, and a cart, built to actually sell, not just display a catalog."
       },
       "configurator": {
         "title": "Prescription-lens configurator",
-        "body": "Step-by-step selection of strength, lens type, and add-ons, with a live-updating price — the most complex part of the system."
+        "body": "Step-by-step selection of strength, lens type, and add-ons, with a live-updating price, the most complex part of the system."
       },
       "accounts": {
         "title": "Customer accounts",
@@ -235,7 +230,7 @@
       },
       "booking": {
         "title": "Eye-exam booking",
-        "body": "Online booking for eye exams, with confirmation and reminders — no phone calls required."
+        "body": "Online booking for eye exams, with confirmation and reminders, no phone calls required."
       },
       "admin": {
         "title": "Admin panel",
@@ -247,17 +242,17 @@
       },
       "testing": {
         "title": "Automated testing",
-        "body": "24 automated tests cover the critical flows — shop, configurator, and booking — before every release."
+        "body": "24 automated tests cover the critical flows (shop, configurator, and booking) before every release."
       },
       "responsive": {
         "title": "Responsive design",
-        "body": "The same experience on phone, tablet, and desktop — most customers arrive on mobile."
+        "body": "The same experience on phone, tablet, and desktop. Most customers arrive on mobile."
       }
     },
     "outcomes": {
       "sales": {
         "title": "Sales around the clock",
-        "body": "The shop now sells outside business hours — an order doesn't wait for the doors to open."
+        "body": "The shop now sells outside business hours. An order doesn't wait for the doors to open."
       },
       "booking": {
         "title": "Fewer phone calls",
@@ -269,7 +264,7 @@
       },
       "ownership": {
         "title": "Full ownership",
-        "body": "Code, content, and data have belonged to Optika Cajs from day one — no lock-in to an agency or platform."
+        "body": "Code, content, and data have belonged to Optika Cajs from day one, with no lock-in to an agency or platform."
       }
     },
     "stats": {
@@ -285,13 +280,13 @@
   },
   "caseSkedio": {
     "meta": {
-      "title": "Skedio — Case Study",
-      "description": "A scheduling and CRM SaaS I'm building for Serbian appointment businesses — 24/7 online booking, a team calendar, client records, and automated WhatsApp reminders, built solo from scratch."
+      "title": "Skedio: Case Study",
+      "description": "A scheduling and CRM SaaS I'm building for Serbian appointment businesses: 24/7 online booking, a team calendar, client records, and automated WhatsApp reminders, built solo from scratch."
     },
     "hero": {
       "kicker": "Case study",
       "title": "Skedio",
-      "tagline": "A scheduling and CRM platform for appointment-based businesses in Serbia — online booking, a team calendar, client records, and automated WhatsApp reminders. A product I'm building solo, from scratch.",
+      "tagline": "A scheduling and CRM platform for appointment-based businesses in Serbia: online booking, a team calendar, client records, and automated WhatsApp reminders. A product I'm building solo, from scratch.",
       "statusTag": "In active development",
       "landingLabel": "Visit landing",
       "appLabel": "Open the app",
@@ -306,24 +301,24 @@
       "status": "Status & what's next"
     },
     "problem": {
-      "body": "Salons, clinics, barbers, and gyms across Serbia still run on a paper diary and a ringing phone. Every missed call is a lost booking, every no-show is dead time, and the foreign scheduling tools that exist ignore how business is actually done here — email that goes unread instead of WhatsApp, and hours and habits that don't match. Skedio is built for this market specifically: appointments confirmed and reminded over WhatsApp, because WhatsApp gets read and email waits."
+      "body": "Salons, clinics, barbers, and gyms across Serbia still run on a paper diary and a ringing phone. Every missed call is a lost booking, every no-show is wasted time, and the foreign scheduling tools that exist ignore how business is actually done here: WhatsApp instead of email that goes unread, and hours and habits that don't match. Skedio is built for this market specifically: appointments are confirmed and reminders arrive over WhatsApp."
     },
     "features": {
-      "booking": { "title": "24/7 online booking", "body": "A public booking page for each business — clients pick a service, staff member, and time slot and book themselves, day or night, no phone call needed." },
-      "calendar": { "title": "Team calendar", "body": "Week time-grid and month views of every staff member's appointments, with statuses colour-coded and completed or cancelled slots greyed out." },
+      "booking": { "title": "24/7 online booking", "body": "A public booking page for each business: clients pick a service, staff member, and time slot and book themselves, day or night, no phone call needed." },
+      "calendar": { "title": "Team calendar", "body": "Week time-grid and month views of every staff member's appointments, with statuses color-coded and completed or canceled slots greyed out." },
       "crm": { "title": "Built-in client records", "body": "A lightweight CRM: every client's history in one place, deduplicated by normalized phone number so the same person never fragments into two records." },
       "staff": { "title": "Staff management", "body": "Add staff members, set their working hours and services, and give each their own bookable calendar and availability." },
-      "services": { "title": "Service catalogue", "body": "Define services with a duration and price; availability and slot lengths are generated from them automatically." },
+      "services": { "title": "Service catalog", "body": "Define services with a duration and price; availability and slot lengths are generated from them automatically." },
       "analytics": { "title": "Dashboard & analytics", "body": "A home dashboard with the day's appointments and the metrics that matter, computed correctly against the local Belgrade calendar day." },
       "reminders": { "title": "Automated WhatsApp reminders", "body": "A scheduled job sends WhatsApp reminders a configurable number of hours before each appointment, each with a one-tap self-cancel link." },
-      "onboarding": { "title": "Ten-minute onboarding", "body": "A first-run wizard takes a non-technical owner from signup to a live, bookable page in about ten minutes — no manual, no training call." }
+      "onboarding": { "title": "Ten-minute onboarding", "body": "A first-run wizard takes a non-technical owner from signup to a live, bookable page in about ten minutes. No manual, no training call." }
     },
     "engineering": {
       "data": { "title": "Supabase + PostgreSQL", "body": "Auth, data, and row-level access on Supabase Postgres, with the schema managed through versioned migrations." },
       "billing": { "title": "Subscriptions", "body": "Paid plans and billing handled through Lemon Squeezy, so the product can charge from day one." },
       "whatsapp": { "title": "WhatsApp via Twilio", "body": "Reminders are queued in the database and dispatched by a cron-triggered endpoint through Twilio, with per-message delivery status tracked." },
       "email": { "title": "Transactional email & monitoring", "body": "Booking and confirmation emails through Resend; runtime errors and performance watched with Sentry and Vercel analytics." },
-      "timezone": { "title": "Timezone-correct by design", "body": "Every time is stored in UTC and converted to Europe/Belgrade for display and slot maths — no naive server-clock bugs across daylight-saving changes." },
+      "timezone": { "title": "Timezone-correct by design", "body": "Every time is stored in UTC and converted to Europe/Belgrade for display and slot math, with no naive server-clock bugs across daylight-saving changes." },
       "availability": { "title": "Availability engine", "body": "Bookable slots are generated with a 15-minute buffer around every appointment, guarded at the database level by an exclusion constraint so two bookings can never overlap." }
     },
     "stat": {
@@ -340,7 +335,7 @@
       "staff": "Skedio staff management screen"
     },
     "status": {
-      "body": "Skedio is in active development and pre-launch — the app is built and running at app.skedio.rs, and the marketing site has been rebuilt on Next.js. Everything now points at a single goal: free-trial signups from owners who want to stop losing time to the paper diary. The near-term roadmap is real-business onboarding, featured businesses, and the polish that turns a working product into one people trust with their bookings."
+      "body": "Skedio is in active development and pre-launch: the app is built and running at app.skedio.rs, and the marketing site has been rebuilt on Next.js. Everything now points at a single goal: free-trial signups from owners who want to stop losing time to the paper diary. The near-term roadmap is growing the user base, featured businesses, and polishing reliability and user experience."
     }
   }
 }
