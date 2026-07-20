@@ -68,3 +68,10 @@ test('mobile mode renders folders in flow (no absolute positioning)', () => {
   const folder = screen.getByRole('button', { name: 'Skedio' });
   expect(folder.className).not.toContain('absolute');
 });
+
+test('Skedio window links to its full case study', () => {
+  renderDesktop();
+  fireEvent.click(screen.getByRole('button', { name: 'Skedio' }));
+  const dialog = screen.getByRole('dialog', { name: 'Skedio' });
+  expect(within(dialog).getByRole('link', { name: /case study/i })).toHaveAttribute('href', '/work/skedio');
+});

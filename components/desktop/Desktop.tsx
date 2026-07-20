@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { CAJS, DESKTOP_PROJECTS, type DesktopProject } from '@/content/work';
+import { CAJS, DESKTOP_PROJECTS, SKEDIO_CASE, type DesktopProject } from '@/content/work';
 import { clampToBounds, type Size } from './geometry';
 import { FolderIcon } from './FolderIcon';
 import { MenuBar } from './MenuBar';
@@ -78,7 +78,20 @@ export function Desktop() {
           id: p.id,
           title: t('work.skedio.title'),
           summary: t('work.skedio.summary'),
+          builtTitle: t('work.desktop.builtTitle'),
+          built: SKEDIO_CASE.features.map((k) => ({ title: t(`caseSkedio.features.${k}.title`) })),
+          specsTitle: t('work.desktop.specsTitle'),
+          stackTitle: t('work.desktop.stackTitle'),
+          stats: [
+            { label: t('caseSkedio.stat.loc'), value: SKEDIO_CASE.stats.loc },
+            { label: t('caseSkedio.stat.screens'), value: SKEDIO_CASE.stats.screens },
+            { label: t('caseSkedio.stat.endpoints'), value: SKEDIO_CASE.stats.endpoints },
+            { label: t('caseSkedio.stat.integrations'), value: SKEDIO_CASE.stats.integrations },
+          ],
+          stack: SKEDIO_CASE.stack,
           links,
+          caseHref: `/work/${SKEDIO_CASE.slug}`,
+          caseCta: t('work.desktop.caseCta'),
         };
       }
       return {
