@@ -58,7 +58,7 @@ export const CAJS: CaseStudy = {
     marketValue: '€3.000–6.000',
     effort: '~250–300h',
   },
-  stack: ['PostgreSQL', 'Vitest', 'Docker', 'HMAC SHA-256'],
+  stack: ['Next.js', 'TypeScript', 'React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Docker', 'Vitest'],
   // NOTE: no quote collected yet — TestimonialSlot renders the "coming soon"
   // state until this is populated. High-priority content task for Alex.
 };

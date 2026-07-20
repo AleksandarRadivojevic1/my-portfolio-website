@@ -15,7 +15,7 @@ export function TestimonialSlot() {
           <p className="font-display text-lg text-fg sm:text-xl">&ldquo;{testimonial.quote}&rdquo;</p>
           <footer className="font-mono text-xs text-muted">
             {testimonial.author}
-            {testimonial.role ? ` — ${testimonial.role}` : null}
+            {testimonial.role ? `, ${testimonial.role}` : null}
           </footer>
         </blockquote>
       ) : (

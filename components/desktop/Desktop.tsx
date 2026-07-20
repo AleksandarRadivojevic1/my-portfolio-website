@@ -256,7 +256,7 @@ export function Desktop() {
       <div className="mx-auto w-full max-w-6xl">
         {/* Label above the screen so the frame reads as a discrete object. */}
         <div className="mb-4 px-1 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          02 — {t('sections.work')}
+          02 · {t('sections.work')}
         </div>
 
         {/* The screen: a bounded, lit monitor panel sitting on the page. */}

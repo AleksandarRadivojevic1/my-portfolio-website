@@ -10,7 +10,7 @@ export function SectionCounter({ index, labelKey }: SectionCounterProps) {
 
   return (
     <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
-      {String(index).padStart(2, '0')} — {t(labelKey)}
+      {String(index).padStart(2, '0')} · {t(labelKey)}
     </span>
   );
 }
