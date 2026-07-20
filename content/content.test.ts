@@ -1,4 +1,4 @@
-import { CAJS, DESKTOP_PROJECTS } from './work';
+import { CAJS, DESKTOP_PROJECTS, SKEDIO_CASE } from './work';
 import { PACKAGES, MAINTENANCE } from './services';
 
 test('no confidential figures in content', () => {
@@ -41,6 +41,21 @@ test('desktop projects: skedio exposes landing + app links', () => {
 
 test('desktop projects: no confidential figures', () => {
   const blob = JSON.stringify(DESKTOP_PROJECTS);
+  expect(blob).not.toContain('€500');
+  expect(blob).not.toContain('€40');
+});
+
+test('skedio case: slug and live urls', () => {
+  expect(SKEDIO_CASE.slug).toBe('skedio');
+  expect(SKEDIO_CASE.landing).toBe('https://skedio.rs');
+  expect(SKEDIO_CASE.app).toBe('https://app.skedio.rs');
+  expect(SKEDIO_CASE.features).toHaveLength(8);
+  expect(SKEDIO_CASE.engineering).toHaveLength(6);
+  expect(SKEDIO_CASE.screenshots).toHaveLength(4);
+});
+
+test('skedio case: no confidential figures', () => {
+  const blob = JSON.stringify(SKEDIO_CASE);
   expect(blob).not.toContain('€500');
   expect(blob).not.toContain('€40');
 });

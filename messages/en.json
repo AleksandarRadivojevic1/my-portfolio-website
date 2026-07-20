@@ -282,5 +282,65 @@
     "screenshots": {
       "placeholder": "Screenshot coming soon"
     }
+  },
+  "caseSkedio": {
+    "meta": {
+      "title": "Skedio — Case Study",
+      "description": "A scheduling and CRM SaaS I'm building for Serbian appointment businesses — 24/7 online booking, a team calendar, client records, and automated WhatsApp reminders, built solo from scratch."
+    },
+    "hero": {
+      "kicker": "Case study",
+      "title": "Skedio",
+      "tagline": "A scheduling and CRM platform for appointment-based businesses in Serbia — online booking, a team calendar, client records, and automated WhatsApp reminders. A product I'm building solo, from scratch.",
+      "statusTag": "In active development",
+      "landingLabel": "Visit landing",
+      "appLabel": "Open the app",
+      "backLabel": "Back to work"
+    },
+    "sections": {
+      "problem": "The problem",
+      "features": "What I built",
+      "engineering": "How it's engineered",
+      "stats": "By the numbers",
+      "screenshots": "Inside the product",
+      "status": "Status & what's next"
+    },
+    "problem": {
+      "body": "Salons, clinics, barbers, and gyms across Serbia still run on a paper diary and a ringing phone. Every missed call is a lost booking, every no-show is dead time, and the foreign scheduling tools that exist ignore how business is actually done here — email that goes unread instead of WhatsApp, and hours and habits that don't match. Skedio is built for this market specifically: appointments confirmed and reminded over WhatsApp, because WhatsApp gets read and email waits."
+    },
+    "features": {
+      "booking": { "title": "24/7 online booking", "body": "A public booking page for each business — clients pick a service, staff member, and time slot and book themselves, day or night, no phone call needed." },
+      "calendar": { "title": "Team calendar", "body": "Week time-grid and month views of every staff member's appointments, with statuses colour-coded and completed or cancelled slots greyed out." },
+      "crm": { "title": "Built-in client records", "body": "A lightweight CRM: every client's history in one place, deduplicated by normalized phone number so the same person never fragments into two records." },
+      "staff": { "title": "Staff management", "body": "Add staff members, set their working hours and services, and give each their own bookable calendar and availability." },
+      "services": { "title": "Service catalogue", "body": "Define services with a duration and price; availability and slot lengths are generated from them automatically." },
+      "analytics": { "title": "Dashboard & analytics", "body": "A home dashboard with the day's appointments and the metrics that matter, computed correctly against the local Belgrade calendar day." },
+      "reminders": { "title": "Automated WhatsApp reminders", "body": "A scheduled job sends WhatsApp reminders a configurable number of hours before each appointment, each with a one-tap self-cancel link." },
+      "onboarding": { "title": "Ten-minute onboarding", "body": "A first-run wizard takes a non-technical owner from signup to a live, bookable page in about ten minutes — no manual, no training call." }
+    },
+    "engineering": {
+      "data": { "title": "Supabase + PostgreSQL", "body": "Auth, data, and row-level access on Supabase Postgres, with the schema managed through versioned migrations." },
+      "billing": { "title": "Subscriptions", "body": "Paid plans and billing handled through Lemon Squeezy, so the product can charge from day one." },
+      "whatsapp": { "title": "WhatsApp via Twilio", "body": "Reminders are queued in the database and dispatched by a cron-triggered endpoint through Twilio, with per-message delivery status tracked." },
+      "email": { "title": "Transactional email & monitoring", "body": "Booking and confirmation emails through Resend; runtime errors and performance watched with Sentry and Vercel analytics." },
+      "timezone": { "title": "Timezone-correct by design", "body": "Every time is stored in UTC and converted to Europe/Belgrade for display and slot maths — no naive server-clock bugs across daylight-saving changes." },
+      "availability": { "title": "Availability engine", "body": "Bookable slots are generated with a 15-minute buffer around every appointment, guarded at the database level by an exclusion constraint so two bookings can never overlap." }
+    },
+    "stat": {
+      "loc": "Lines of code",
+      "screens": "App screens",
+      "endpoints": "API endpoints",
+      "migrations": "DB migrations",
+      "integrations": "Integrations"
+    },
+    "shots": {
+      "dashboard": "Skedio dashboard with the day's appointments and metrics",
+      "calendar": "Skedio week calendar showing staff appointments",
+      "clients": "Skedio client records list",
+      "staff": "Skedio staff management screen"
+    },
+    "status": {
+      "body": "Skedio is in active development and pre-launch — the app is built and running at app.skedio.rs, and the marketing site has been rebuilt on Next.js. Everything now points at a single goal: free-trial signups from owners who want to stop losing time to the paper diary. The near-term roadmap is real-business onboarding, featured businesses, and the polish that turns a working product into one people trust with their bookings."
+    }
   }
 }

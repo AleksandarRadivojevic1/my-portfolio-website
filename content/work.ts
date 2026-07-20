@@ -123,3 +123,63 @@ export const DESKTOP_PROJECTS: DesktopProject[] = [
   { id: 'soon-1', kind: 'locked', start: { x: 70, y: 26 } },
   { id: 'soon-2', kind: 'locked', start: { x: 60, y: 62 } },
 ];
+
+// --- Skedio case study --------------------------------------------------
+// Structural facts for the Skedio case-study page. Copy lives in
+// messages/*.json under caseSkedio.*. Skedio is a self-built, pre-launch
+// product: NO usage/revenue/customer claims, and NO "tests" stat (the app
+// has none). Numbers below are structural (measured from the app repo).
+
+export interface SkedioStats {
+  loc: string;
+  screens: string;
+  endpoints: string;
+  migrations: string;
+  integrations: string;
+}
+
+export interface CaseScreenshot {
+  /** Public path under /work/skedio/. */
+  src: string;
+  /** Message key under caseSkedio.shots.* for alt text. */
+  altKey: string;
+  /** Tailwind aspect-ratio class for the frame. */
+  aspect: string;
+}
+
+export interface SkedioCase {
+  id: string;
+  slug: string;
+  landing: string;
+  app: string;
+  /** Message keys under caseSkedio.features.* */
+  features: string[];
+  /** Message keys under caseSkedio.engineering.* */
+  engineering: string[];
+  stats: SkedioStats;
+  stack: string[];
+  screenshots: CaseScreenshot[];
+}
+
+export const SKEDIO_CASE: SkedioCase = {
+  id: 'skedio',
+  slug: 'skedio',
+  landing: 'https://skedio.rs',
+  app: 'https://app.skedio.rs',
+  features: ['booking', 'calendar', 'crm', 'staff', 'services', 'analytics', 'reminders', 'onboarding'],
+  engineering: ['data', 'billing', 'whatsapp', 'email', 'timezone', 'availability'],
+  stats: {
+    loc: '~11.000',
+    screens: '17',
+    endpoints: '8',
+    migrations: '6',
+    integrations: '5',
+  },
+  stack: ['Next.js 16', 'TypeScript', 'Supabase', 'PostgreSQL', 'Lemon Squeezy', 'Twilio', 'Resend', 'Sentry'],
+  screenshots: [
+    { src: '/work/skedio/dashboard.webp', altKey: 'dashboard', aspect: 'aspect-[16/10]' },
+    { src: '/work/skedio/calendar.png', altKey: 'calendar', aspect: 'aspect-[16/10]' },
+    { src: '/work/skedio/clients.png', altKey: 'clients', aspect: 'aspect-[16/10]' },
+    { src: '/work/skedio/staff.png', altKey: 'staff', aspect: 'aspect-[16/10]' },
+  ],
+};

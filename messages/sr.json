@@ -282,5 +282,65 @@
     "screenshots": {
       "placeholder": "Snimak ekrana stiže uskoro"
     }
+  },
+  "caseSkedio": {
+    "meta": {
+      "title": "Skedio — studija slučaja",
+      "description": "SaaS za zakazivanje i CRM koji pravim za srpske uslužne biznise — onlajn zakazivanje 24/7, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici, napravljen samostalno od nule."
+    },
+    "hero": {
+      "kicker": "Studija slučaja",
+      "title": "Skedio",
+      "tagline": "Platforma za zakazivanje i CRM za uslužne biznise u Srbiji — onlajn zakazivanje, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici. Proizvod koji pravim samostalno, od nule.",
+      "statusTag": "U aktivnom razvoju",
+      "landingLabel": "Poseti sajt",
+      "appLabel": "Otvori aplikaciju",
+      "backLabel": "Nazad na radove"
+    },
+    "sections": {
+      "problem": "Problem",
+      "features": "Šta sam napravio",
+      "engineering": "Kako je napravljeno",
+      "stats": "U brojkama",
+      "screenshots": "Unutar proizvoda",
+      "status": "Status i šta sledi"
+    },
+    "problem": {
+      "body": "Saloni, ordinacije, frizeri i teretane širom Srbije i dalje rade uz rokovnik i telefon koji stalno zvoni. Svaki propušten poziv je izgubljen termin, svako nedolaženje je mrtvo vreme, a strani alati za zakazivanje ignorišu kako se posao ovde zaista radi — mejl koji niko ne čita umesto WhatsApp-a, i radno vreme i navike koji se ne poklapaju. Skedio je pravljen baš za ovo tržište: termini se potvrđuju i podsećaju preko WhatsApp-a, jer se WhatsApp čita, a mejl čeka."
+    },
+    "features": {
+      "booking": { "title": "Onlajn zakazivanje 24/7", "body": "Javna stranica za zakazivanje za svaki biznis — klijenti sami biraju uslugu, radnika i termin i zakazuju, danju ili noću, bez ijednog poziva." },
+      "calendar": { "title": "Timski kalendar", "body": "Nedeljni i mesečni prikaz termina svih članova tima, sa statusima u boji i zasivljenim završenim ili otkazanim terminima." },
+      "crm": { "title": "Ugrađeni kartoni klijenata", "body": "Lagani CRM: istorija svakog klijenta na jednom mestu, sa objedinjavanjem po normalizovanom broju telefona da se isti klijent nikad ne razdvoji u dva kartona." },
+      "staff": { "title": "Upravljanje osobljem", "body": "Dodaj članove tima, podesi im radno vreme i usluge, i svakom daj sopstveni kalendar i dostupnost." },
+      "services": { "title": "Katalog usluga", "body": "Definiši usluge sa trajanjem i cenom; dostupnost i dužina termina računaju se automatski na osnovu njih." },
+      "analytics": { "title": "Kontrolna tabla i analitika", "body": "Početna tabla sa terminima za taj dan i ključnim brojkama, tačno izračunatim prema lokalnom beogradskom danu." },
+      "reminders": { "title": "Automatski WhatsApp podsetnici", "body": "Zakazani proces šalje WhatsApp podsetnike određeni broj sati pre termina, svaki sa linkom za otkazivanje u jednom dodiru." },
+      "onboarding": { "title": "Postavka za deset minuta", "body": "Čarobnjak pri prvom pokretanju vodi netehničkog vlasnika od registracije do žive stranice za zakazivanje za desetak minuta — bez uputstva i bez poziva za obuku." }
+    },
+    "engineering": {
+      "data": { "title": "Supabase + PostgreSQL", "body": "Autentikacija, podaci i pristup na nivou reda na Supabase Postgres-u, sa šemom vođenom kroz verzionisane migracije." },
+      "billing": { "title": "Pretplate", "body": "Plaćeni planovi i naplata preko Lemon Squeezy-ja, tako da proizvod može da naplaćuje od prvog dana." },
+      "whatsapp": { "title": "WhatsApp preko Twilio-a", "body": "Podsetnici se zakazuju u bazi i šalju preko cron endpointa kroz Twilio, uz praćenje statusa isporuke svake poruke." },
+      "email": { "title": "Transakcioni mejlovi i nadzor", "body": "Mejlovi o zakazivanju i potvrdi preko Resend-a; greške i performanse prati Sentry i Vercel analitika." },
+      "timezone": { "title": "Ispravno vreme po dizajnu", "body": "Svako vreme se čuva u UTC-u i pretvara u Europe/Belgrade za prikaz i računanje termina — bez grešaka sa serverskim satom pri prelasku na letnje/zimsko vreme." },
+      "availability": { "title": "Motor dostupnosti", "body": "Slobodni termini se generišu sa buferom od 15 minuta oko svakog termina, uz zaštitu na nivou baze (exclusion constraint) da se dva termina nikad ne preklope." }
+    },
+    "stat": {
+      "loc": "Linija koda",
+      "screens": "Ekrana u aplikaciji",
+      "endpoints": "API endpointa",
+      "migrations": "Migracija baze",
+      "integrations": "Integracija"
+    },
+    "shots": {
+      "dashboard": "Skedio kontrolna tabla sa terminima i brojkama za taj dan",
+      "calendar": "Skedio nedeljni kalendar sa terminima osoblja",
+      "clients": "Skedio lista kartona klijenata",
+      "staff": "Skedio ekran za upravljanje osobljem"
+    },
+    "status": {
+      "body": "Skedio je u aktivnom razvoju i pred lansiranjem — aplikacija je napravljena i radi na app.skedio.rs, a marketinški sajt je iznova napravljen na Next.js-u. Sve sada vodi ka jednom cilju: prijave za besplatan probni period od vlasnika koji žele da prestanu da gube vreme na rokovnik. Kratkoročni plan je uvođenje pravih biznisa, istaknuti biznisi i doterivanje koje proizvod koji radi pretvara u onaj kome ljudi poveravaju svoje termine."
+    }
   }
 }
