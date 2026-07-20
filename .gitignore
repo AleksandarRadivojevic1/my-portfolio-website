@@ -1,6 +1,9 @@
 # Local planning & design docs — never uploaded
 docs/
-
+.superpowers
+.next
+AGENTS.md
+CLAUDE.md
 # Next.js
 /.next/
 /node_modules
