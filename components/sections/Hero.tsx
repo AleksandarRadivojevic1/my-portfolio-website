@@ -12,12 +12,19 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 py-32"
+      // `100svh`, not `min-h-screen` (100vh): on iOS `100vh` is the *large*
+      // viewport (behind Safari's UI), so `justify-center` centred the content
+      // in an oversized box and pushed the first name line up under the fixed
+      // nav. `svh` is the stable small viewport, so centring matches what's
+      // actually visible.
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden px-6 py-32"
     >
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8">
         <SectionCounter index={0} labelKey="sections.hero" />
         <MonoLabel>{t('role')}</MonoLabel>
-        <h1 className="font-display leading-[0.9]">
+        {/* pb reserves room for the serif descenders (the `j` in Radivojević)
+            that the tight 0.9 line-height would otherwise clip. */}
+        <h1 className="font-display leading-[0.9] pb-[0.12em]">
           <Reveal as="span" delay={0}>
             <span
               className={`block ${NAME_SIZE} text-transparent [-webkit-text-stroke:1.5px_var(--color-fg)]`}
