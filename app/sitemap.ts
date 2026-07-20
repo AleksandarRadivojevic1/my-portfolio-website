@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { SITE_ORIGIN } from '@/lib/seo';
 
-const PATHS = ['/', '/work/optika-cajs'];
+const PATHS = ['/', '/work/optika-cajs', '/work/skedio'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return PATHS.flatMap((path) => {

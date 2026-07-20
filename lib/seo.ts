@@ -33,6 +33,10 @@ const PAGE_META: Record<string, Record<Locale, PageMeta>> = {
     sr: srMessages.caseCajs.meta,
     en: enMessages.caseCajs.meta,
   },
+  '/work/skedio': {
+    sr: srMessages.caseSkedio.meta,
+    en: enMessages.caseSkedio.meta,
+  },
 };
 
 const OG_LOCALE: Record<Locale, string> = {
