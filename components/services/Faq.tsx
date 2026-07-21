@@ -1,19 +1,16 @@
 import { useTranslations } from 'next-intl';
 import { FAQ } from '@/content/faq';
+import { FaqAccordion } from './FaqAccordion';
 
 export function Faq() {
   const t = useTranslations('services.faq');
 
-  return (
-    <div className="flex flex-col divide-y divide-line border border-line">
-      {FAQ.map((entry) => (
-        <details key={entry.id} className="group p-6">
-          <summary className="cursor-pointer list-none font-display text-base text-fg marker:content-none sm:text-lg">
-            {t(`${entry.id}.question`)}
-          </summary>
-          <p className="mt-3 text-sm text-muted sm:text-base">{t(`${entry.id}.answer`)}</p>
-        </details>
-      ))}
-    </div>
-  );
+  // Resolve copy on the server, hand plain strings to the client accordion.
+  const items = FAQ.map((entry) => ({
+    id: entry.id,
+    question: t(`${entry.id}.question`),
+    answer: t(`${entry.id}.answer`),
+  }));
+
+  return <FaqAccordion items={items} />;
 }

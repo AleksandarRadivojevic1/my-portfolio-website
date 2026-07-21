@@ -15,7 +15,12 @@
 
 /* Reserve the scrollbar gutter so toggling overflow (boot scroll-lock) never
    reflows the page sideways. */
-html { background: var(--color-bg); color: var(--color-fg); scrollbar-gutter: stable; }
+/* Nav anchors (#work, #services, #contact) glide instead of teleporting. The
+   reduced-motion rule below switches this back to an instant jump. */
+html { background: var(--color-bg); color: var(--color-fg); scrollbar-gutter: stable; scroll-behavior: smooth; }
+/* Sections carry py-32, so a landed heading clears the fixed nav on its own —
+   this is the margin for anything anchored tighter to its top edge. */
+:target { scroll-margin-top: 5rem; }
 body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 

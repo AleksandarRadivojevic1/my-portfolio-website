@@ -13,6 +13,7 @@ function formatTime(date: Date) {
     timeZone: 'Europe/Belgrade',
     hour: '2-digit',
     minute: '2-digit',
+    second: '2-digit',
     hour12: false,
   }).format(date);
 }
@@ -28,18 +29,20 @@ export function TelemetryBar({ locale }: TelemetryBarProps) {
 
   useEffect(() => {
     // Client-only mount gate: the server (and the client's first paint) render
-    // the `--:--` / `0%` placeholders. The first rAF callback below seeds the
+    // the `--:--:--` / `0%` placeholders. The first rAF callback below seeds the
     // real clock and scroll progress, so the wall clock never touches the
     // initial render path and server/client HTML stay identical.
     let frameId: number;
-    let lastMinute = -1;
+    let lastSecond = -1;
     let progressSeeded = false;
 
     const tick = () => {
       const now = new Date();
-      const minute = now.getMinutes();
-      if (minute !== lastMinute) {
-        lastMinute = minute;
+      // rAF fires ~60x/s but the clock only re-renders when the second rolls
+      // over, so the ticking digit costs one state update per second.
+      const second = now.getSeconds();
+      if (second !== lastSecond) {
+        lastSecond = second;
         setTime(formatTime(now));
       }
       if (!progressSeeded) {
@@ -60,8 +63,9 @@ export function TelemetryBar({ locale }: TelemetryBarProps) {
         <span>
           {progress.toString().padStart(2, '0')}% ↕
         </span>
-        <span>
-          {time ?? '--:--'} · {locale.toUpperCase()}
+        {/* Tabular figures so the ticking seconds don't shift the row width. */}
+        <span className="tabular-nums">
+          {time ?? '--:--:--'} · {locale.toUpperCase()}
         </span>
       </div>
     </div>
