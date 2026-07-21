@@ -8,6 +8,22 @@
 // market value (see stats.marketValue below) may appear. See
 // content/content.test.ts for the exact guarded strings.
 
+/**
+ * Ship dates, ISO 8601 (YYYY-MM-DD). Consumed by `caseStudyJsonLd()` as
+ * schema.org datePublished/dateModified.
+ *
+ * Optional on purpose: a wrong date is worse than no date here. Both fields are
+ * *recommended*, not required, for CreativeWork — but they're machine-readable
+ * claims, so Google and AI crawlers will repeat whatever we put here. Leave
+ * undefined until the real date is known rather than approximating.
+ */
+export interface ProjectDates {
+  /** When the project first shipped to production. */
+  published: string;
+  /** Last substantive update. Omit when it's never been revised. */
+  modified?: string;
+}
+
 export interface CaseStudyStats {
   pages: string;
   loc: string;
@@ -32,6 +48,8 @@ export interface CaseStudy {
   outcomes: string[];
   stats: CaseStudyStats;
   stack: string[];
+  /** Ship dates for structured data. Absent until Alex confirms them. */
+  dates?: ProjectDates;
   /** Client quote for the Work section's TestimonialSlot. Absent until collected — see spec §6.1. */
   testimonial?: Testimonial;
 }
@@ -59,6 +77,12 @@ export const CAJS: CaseStudy = {
     effort: '~250–300h',
   },
   stack: ['Next.js', 'TypeScript', 'React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Docker', 'Vitest'],
+  // Go-live. The shop is hosted on the client's Vercel account, so there's no
+  // deploy history reachable from here to confirm it against — this is the date
+  // of the launch-prep commits in cajs-optika (branded 404, error boundaries,
+  // real 404 status codes, SEO pass), confirmed by Alex as the handoff.
+  // No `modified`: nothing has been revised since.
+  dates: { published: '2026-07-18' },
   // NOTE: no quote collected yet — TestimonialSlot renders the "coming soon"
   // state until this is populated. High-priority content task for Alex.
 };
@@ -70,6 +94,8 @@ export interface WorkItem {
   live?: string;
   /** Marketing/landing URL, when distinct from the live app. */
   landing?: string;
+  /** Ship dates for structured data. Absent until Alex confirms them. */
+  dates?: ProjectDates;
 }
 
 // NOTE: Skedio live/landing URLs and stack are not yet finalized by Alex.
@@ -78,6 +104,13 @@ export interface WorkItem {
 export const SKEDIO: WorkItem = {
   id: 'skedio',
   stack: [],
+  // Skedio is split across two repos: the app (saas-project-app, first commit
+  // 2026-04-29) and the marketing site (skedio-landing). `published` is when
+  // the *product* first became publicly reachable — the landing page's Vercel
+  // project creation — not when the app repo started. A start date in
+  // datePublished would read to Google as a launch date, which it isn't.
+  // `modified` is the last commit across both repos.
+  dates: { published: '2026-06-03', modified: '2026-06-08' },
 };
 
 // --- Desktop-OS Work section --------------------------------------------

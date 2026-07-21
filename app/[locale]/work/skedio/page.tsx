@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { CaseSkedio } from '@/components/work/CaseSkedio';
-import { buildMetadata, type Locale } from '@/lib/seo';
+import { JsonLd } from '@/components/JsonLd';
+import { buildMetadata, breadcrumbJsonLd, caseStudyJsonLd, type Locale } from '@/lib/seo';
+
+const PATH = '/work/skedio';
 
 type CaseSkedioPageProps = {
   params: Promise<{ locale: string }>;
@@ -9,15 +12,19 @@ type CaseSkedioPageProps = {
 
 export async function generateMetadata({ params }: CaseSkedioPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return buildMetadata(locale as Locale, '/work/skedio');
+  return buildMetadata(locale as Locale, PATH);
 }
 
 export default async function SkedioPage({ params }: CaseSkedioPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const project = caseStudyJsonLd(locale as Locale, PATH);
+
   return (
     <main>
+      <JsonLd data={breadcrumbJsonLd(locale as Locale, PATH)} />
+      {project && <JsonLd data={project} />}
       <CaseSkedio />
     </main>
   );

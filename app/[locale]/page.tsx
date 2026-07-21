@@ -5,7 +5,8 @@ import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Work } from "@/components/sections/Work";
 import { Contact } from "@/components/sections/Contact";
-import { buildMetadata, type Locale } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { buildMetadata, faqJsonLd, type Locale } from "@/lib/seo";
 
 type HomeProps = {
   params: Promise<{ locale: string }>;
@@ -22,6 +23,7 @@ export default async function Home({ params }: HomeProps) {
 
   return (
     <main>
+      <JsonLd data={faqJsonLd(locale as Locale)} />
       <Hero />
       <About />
       <Work />
