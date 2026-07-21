@@ -69,7 +69,18 @@ function drawScreen(ctx: CanvasRenderingContext2D, boot: BootState) {
 }
 
 function AppleII({ boot }: { boot: BootState }) {
-  const { scene } = useGLTF('/models/appleii.glb');
+  const { scene: cachedScene } = useGLTF('/models/appleii.glb');
+
+  // `useGLTF` is `useLoader` under the hood, so this scene is a single object
+  // cached globally by URL and shared by every mount. We reassign the screen
+  // mesh's material below, which would mutate that shared model: on a remount
+  // (switching locale re-mounts the layout) the model still carried the
+  // PREVIOUS boot's material, whose canvas held the finished log — so the new
+  // boot painted a screen full of "READY" text before its own effects ran.
+  // Cloning gives each mount its own meshes to reassign. Geometries and
+  // materials are shared by reference, which is what we want — we only swap
+  // the reference on our copy, never mutate the cached original.
+  const scene = useMemo(() => cachedScene.clone(true), [cachedScene]);
 
   const { canvas, ctx, texture } = useMemo(() => {
     const c = document.createElement('canvas');
