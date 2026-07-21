@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useMemo, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Bounds, Center } from '@react-three/drei';
-import { EffectComposer, Bloom, ChromaticAberration, Noise, Vignette, Glitch } from '@react-three/postprocessing';
+import { EffectComposer, Bloom, ChromaticAberration, Vignette, Glitch } from '@react-three/postprocessing';
 import { BlendFunction, GlitchMode } from 'postprocessing';
 import { CanvasTexture, MeshBasicMaterial, Mesh, Vector2, SRGBColorSpace } from 'three';
 import { BOOT_LINES, type BootState } from './bootLines';
@@ -17,24 +17,34 @@ export { BOOT_LINES, type BootState } from './bootLines';
 const CW = 640;
 const CH = 480;
 
-function drawScreen(ctx: CanvasRenderingContext2D, boot: BootState) {
+// Takes `phase` and `visibleLines` rather than the whole BootState on purpose:
+// it never reads `count`, and `count` updates every animation frame during the
+// counter. Passing the state object made the redraw effect depend on a value
+// the drawing ignores, so the canvas was fully repainted — 160 scanline rects
+// plus a radial gradient — and re-uploaded to the GPU ~130 times per boot to
+// produce byte-identical output. The signature now states the real dependency.
+function drawScreen(
+  ctx: CanvasRenderingContext2D,
+  phase: BootState['phase'],
+  visibleLines: number
+) {
   // CRT off-black with a hint of warmth.
   ctx.fillStyle = '#070502';
   ctx.fillRect(0, 0, CW, CH);
 
   const amber = '#F0BC57';
 
-  if (boot.phase === 'power') {
+  if (phase === 'power') {
     // Power-on: a bright band across the tube.
     ctx.fillStyle = 'rgba(240,188,87,0.85)';
     ctx.fillRect(0, CH / 2 - 46, CW, 92);
-  } else if (boot.phase === 'log' || boot.phase === 'enter' || boot.phase === 'exit') {
+  } else if (phase === 'log' || phase === 'enter' || phase === 'exit') {
     ctx.fillStyle = amber;
     ctx.font = '28px "JetBrains Mono", ui-monospace, monospace';
     ctx.textBaseline = 'top';
     const padX = 54;
     let y = 84;
-    const lines = BOOT_LINES.slice(0, boot.visibleLines);
+    const lines = BOOT_LINES.slice(0, visibleLines);
     lines.forEach((l, i) => {
       ctx.fillText(l, padX, y);
       if (i === lines.length - 1 && l === 'READY') {
@@ -99,11 +109,12 @@ function AppleII({ boot }: { boot: BootState }) {
     });
   }, [scene, texture]);
 
-  // Redraw whenever the boot state changes.
+  // Redraw only when the drawing actually changes — not every frame the
+  // counter ticks. See drawScreen's note.
   useEffect(() => {
-    drawScreen(ctx, boot);
+    drawScreen(ctx, boot.phase, boot.visibleLines);
     texture.needsUpdate = true;
-  }, [ctx, texture, boot]);
+  }, [ctx, texture, boot.phase, boot.visibleLines]);
 
   useFrame((_, delta) => {
     const inEnter = boot.phase === 'enter';
@@ -135,7 +146,11 @@ function AppleII({ boot }: { boot: BootState }) {
 
 export function BootScene({ boot }: { boot: BootState }) {
   return (
-    <Canvas camera={{ position: [0, 0.2, 8], fov: 30 }} dpr={[1, 2]} gl={{ antialias: true }}>
+    // dpr capped at 1.5, not 2: on a retina display every one of the
+    // postprocessing passes below runs over 4x the fragments at dpr 2. And
+    // antialias:false because the EffectComposer renders to its own targets
+    // and resolves there — canvas MSAA is largely paid for and thrown away.
+    <Canvas camera={{ position: [0, 0.2, 8], fov: 30 }} dpr={[1, 1.5]} gl={{ antialias: false }}>
       <color attach="background" args={['#080604']} />
 
       <ambientLight intensity={0.07} />
@@ -155,7 +170,9 @@ export function BootScene({ boot }: { boot: BootState }) {
           radialModulation={false}
           modulationOffset={0}
         />
-        <Noise opacity={0.04} />
+        {/* Grain used to be a <Noise /> pass here. It's now a composited DOM
+            layer in BootPreloader3D — same look, one less full-screen GPU pass
+            per frame, and it covers the DOM boot screen too. */}
         <Vignette offset={0.2} darkness={0.95} />
         <Glitch
           active={boot.phase === 'enter'}

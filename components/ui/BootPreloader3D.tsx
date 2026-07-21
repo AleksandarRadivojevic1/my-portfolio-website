@@ -4,6 +4,7 @@ import { useEffect, useState, type ComponentType } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { BOOT_LINES, type BootState } from '@/components/webgl/bootLines';
 import { BootScreen } from '@/components/ui/BootScreen';
+import { GRAIN_URL } from '@/components/ui/grain';
 import { setScrollLocked } from '@/lib/scrollLock';
 
 type Phase = BootState['phase'];
@@ -185,6 +186,16 @@ export function BootPreloader3D({ onDone }: BootPreloader3DProps) {
               carries it, exactly as before. */}
           {!reduced && Scene && <Scene boot={boot} />}
           {!reduced && !Scene && use3D === false && <BootScreen boot={boot} />}
+
+          {/* Film grain over whichever renderer is up. Replaces the <Noise />
+              postprocessing pass the 3D scene used to carry: same texture as
+              <Atmosphere />, one composited layer instead of a per-frame GPU
+              pass, and the DOM boot screen gets it too. */}
+          <div
+            aria-hidden
+            className="grain pointer-events-none absolute -inset-1/2 h-[200%] w-[200%] opacity-[0.05] mix-blend-overlay"
+            style={{ backgroundImage: GRAIN_URL, backgroundSize: '170px 170px' }}
+          />
 
           {/* Corner counter during the count. */}
           <AnimatePresence>
