@@ -77,12 +77,16 @@ export const CAJS: CaseStudy = {
     effort: '~250–300h',
   },
   stack: ['Next.js', 'TypeScript', 'React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Docker', 'Vitest'],
-  // Go-live. The shop is hosted on the client's Vercel account, so there's no
-  // deploy history reachable from here to confirm it against — this is the date
-  // of the launch-prep commits in cajs-optika (branded 404, error boundaries,
-  // real 404 status codes, SEO pass), confirmed by Alex as the handoff.
-  // No `modified`: nothing has been revised since.
-  dates: { published: '2026-07-18' },
+  // Go-live per Search Console, which is the only hard evidence available: the
+  // shop runs on the client's Vercel account, so no deploy history is reachable
+  // from here. GSC has search data for optikacajs.rs from 2026-07-07 and its
+  // sitemap was submitted 07-08 — so it was live and indexed by then.
+  //
+  // Do not "correct" this back to 07-18 from the git log. That day's commits
+  // (branded 404, error boundaries, real 404 status codes) look like launch prep
+  // but are post-launch fixes; reading them as the launch date was wrong once
+  // already. `modified` is that same follow-up work.
+  dates: { published: '2026-07-07', modified: '2026-07-18' },
   // NOTE: no quote collected yet — TestimonialSlot renders the "coming soon"
   // state until this is populated. High-priority content task for Alex.
 };
@@ -104,13 +108,17 @@ export interface WorkItem {
 export const SKEDIO: WorkItem = {
   id: 'skedio',
   stack: [],
-  // Skedio is split across two repos: the app (saas-project-app, first commit
-  // 2026-04-29) and the marketing site (skedio-landing). `published` is when
-  // the *product* first became publicly reachable — the landing page's Vercel
-  // project creation — not when the app repo started. A start date in
-  // datePublished would read to Google as a launch date, which it isn't.
-  // `modified` is the last commit across both repos.
-  dates: { published: '2026-06-03', modified: '2026-06-08' },
+  // Skedio is split across two repos: the app (saas-project-app) and the
+  // marketing site (skedio-landing). `published` is when the *product* first
+  // became publicly reachable, taken from Search Console: skedio.rs has search
+  // data from 2026-05-05 and real impressions from 05-07.
+  //
+  // Not the app repo's first commit (2026-04-29) — that's a start date, and
+  // datePublished reads to Google as a launch. Not the landing's Vercel project
+  // creation (2026-06-03) either: the domain was already serving and ranking a
+  // month before that project existed, so build infrastructure is the wrong
+  // source here. `modified` is the last commit across both repos.
+  dates: { published: '2026-05-05', modified: '2026-06-08' },
 };
 
 // --- Desktop-OS Work section --------------------------------------------

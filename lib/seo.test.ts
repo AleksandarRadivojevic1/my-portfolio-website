@@ -62,17 +62,26 @@ test('caseStudyJsonLd returns null for a path that is not a case study', () => {
   expect(caseStudyJsonLd('en', '/')).toBeNull();
 });
 
-// Dates are public claims about when work shipped, and they were reconstructed
-// from repo and deploy history rather than memory. Pin them so a careless edit
-// has to be deliberate.
+// Dates are public claims about when work shipped, and both were wrong once —
+// derived from git and Vercel history before Search Console showed the real
+// go-live. Pin them to the GSC-backed values so a careless edit has to be
+// deliberate. See the provenance comments in content/work.ts before changing.
 test('case study dates are ISO 8601 and only present where recorded', () => {
   const cajs = caseStudyJsonLd('en', '/work/optika-cajs') as Record<string, unknown>;
-  expect(cajs.datePublished).toBe('2026-07-18');
-  expect(cajs).not.toHaveProperty('dateModified');
+  expect(cajs.datePublished).toBe('2026-07-07');
+  expect(cajs.dateModified).toBe('2026-07-18');
 
   const skedio = caseStudyJsonLd('en', '/work/skedio') as Record<string, unknown>;
-  expect(skedio.datePublished).toBe('2026-06-03');
+  expect(skedio.datePublished).toBe('2026-05-05');
   expect(skedio.dateModified).toBe('2026-06-08');
+});
+
+// A project cannot have been modified before it was published.
+test('every recorded modified date is at or after its published date', () => {
+  for (const path of ['/work/optika-cajs', '/work/skedio']) {
+    const w = caseStudyJsonLd('en', path) as unknown as Record<string, string>;
+    if (w.dateModified) expect(w.dateModified >= w.datePublished).toBe(true);
+  }
 });
 
 test('sitemap lastModified uses project dates, not build time', () => {
