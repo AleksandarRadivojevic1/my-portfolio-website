@@ -101,6 +101,31 @@ export function personJsonLd() {
     telephone: phoneE164(),
     url: SITE_ORIGIN,
     jobTitle: 'Full-Stack Developer',
+    // Stated in the About copy too, but prose is invisible to search engines
+    // and AI systems as a *credential*. This makes it a typed edge to a real
+    // institution, which is the kind of corroboration E-E-A-T rewards.
+    //
+    // `affiliation`, not `alumniOf`: schema.org's alumniOf means someone who
+    // graduated from the institution. This is an in-progress master's, and the
+    // bachelor's was earned elsewhere — so alumniOf would be a false claim.
+    affiliation: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Faculty of Electronic Engineering, University of Niš',
+      url: 'https://www.elfak.ni.ac.rs/',
+      parentOrganization: {
+        '@type': 'CollegeOrUniversity',
+        name: 'University of Niš',
+        url: 'https://www.ni.ac.rs/',
+      },
+    },
+    // Identity corroboration: these tie the Person entity to profiles search
+    // engines already know, which is what disambiguates one Aleksandar
+    // Radivojević from another.
+    sameAs: [
+      'https://github.com/AleksandarRadivojevic1',
+      'https://www.linkedin.com/in/aleksandar-radivojevic',
+      'https://www.instagram.com/acko___/',
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Leskovac',
