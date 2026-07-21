@@ -10,6 +10,44 @@ import { setScrollLocked } from '@/lib/scrollLock';
 type Phase = BootState['phase'];
 
 /**
+ * Does this machine have a GPU that can actually composite the scene?
+ *
+ * Cores and memory say nothing about the renderer, and the renderer is what
+ * this scene spends: five fullscreen postprocessing passes. On a software
+ * rasteriser (SwiftShader, llvmpipe — headless Chrome, VMs, remote desktops,
+ * blocklisted drivers) each frame is rasterised *on the main thread* and costs
+ * ~600 ms. Measured on this page: 23 long tasks / ~11 s blocked under
+ * SwiftShader versus 6 tasks / ~0.55 s on a real GPU, same sequence, same
+ * timing. Those visitors were getting a 1.6 fps slideshow; the DOM screen is
+ * both cheaper and better-looking for them.
+ *
+ * The probe context is released immediately — we only want the driver string.
+ */
+function hasRealGPU(): boolean {
+  try {
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl2') ?? canvas.getContext('webgl');
+    if (!gl) return false;
+
+    const dbg = gl.getExtension('WEBGL_debug_renderer_info');
+    const renderer = dbg
+      ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)).toLowerCase()
+      : '';
+    gl.getExtension('WEBGL_lose_context')?.loseContext();
+
+    // Empty string = the extension is masked (Firefox with privacy.resistFingerprinting).
+    // Assume real hardware there rather than punishing it; those users have a GPU.
+    if (!renderer) return true;
+
+    return !/swiftshader|llvmpipe|softwarerasterizer|software|basic render|microsoft basic/.test(
+      renderer
+    );
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Is this device worth spending ~364 KB (1.16 MB parsed) of three.js on?
  *
  * Phones are the case this exists for: five fullscreen postprocessing passes on
@@ -21,16 +59,18 @@ function canAfford3D(): boolean {
   if (window.innerWidth < 900) return false;
   const cores = navigator.hardwareConcurrency ?? 4;
   const memory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 4;
-  return cores >= 4 && memory >= 4;
+  if (cores < 4 || memory < 4) return false;
+  return hasRealGPU();
 }
 
 /**
  * Sequence lengths, per device class.
  *
  * The overlay is `fixed inset-0`, so no page content can paint until it lifts —
- * the sequence duration is a hard floor on Largest Contentful Paint. The full
- * version runs ~6.9s including the exit fade, which was most of why mobile LCP
- * measured 11.8s. Phones get ~2.3s: still a moment, but inside the budget.
+ * the sequence duration is a hard floor on Largest Contentful Paint, and it is
+ * the whole of Speed Index: nothing visibly populates while it's up. The full
+ * version ran ~6.9s, which measured as a 9.8s desktop Speed Index. It is now
+ * ~4.3s. Phones get ~2.3s: still a moment, but inside the budget.
  */
 type Timing = {
   /** Corner counter 0 → 100. */
@@ -48,7 +88,7 @@ type Timing = {
 };
 
 const TIMING: Record<'full' | 'fast', Timing> = {
-  full: { count: 2200, power: 480, line: 230, hold: 900, enter: 1150, fade: 0.6 },
+  full: { count: 1300, power: 300, line: 150, hold: 480, enter: 700, fade: 0.5 },
   fast: { count: 700, power: 180, line: 70, hold: 250, enter: 350, fade: 0.35 },
 };
 
