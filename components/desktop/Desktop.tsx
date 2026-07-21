@@ -2,11 +2,20 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { CAJS, DESKTOP_PROJECTS, SKEDIO_CASE, type DesktopProject } from '@/content/work';
 import { clampToBounds, type Size } from './geometry';
 import { FolderIcon } from './FolderIcon';
 import { MenuBar } from './MenuBar';
 import { ProjectWindow, type WindowContent } from './ProjectWindow';
+
+// Case-study pages that must be linked from the server-rendered HTML, in the
+// order they appear on screen. Slugs come from the content layer so these can
+// never drift from the routes that actually exist.
+const CASE_LINKS = [
+  { slug: CAJS.slug, titleKey: 'work.cajs.title' },
+  { slug: SKEDIO_CASE.slug, titleKey: 'work.skedio.title' },
+] as const;
 
 const FOLDER_SIZE: Size = { width: 112, height: 88 };
 // Height is a generous floor used only for drag-clamping so a window can't be
@@ -254,10 +263,11 @@ export function Desktop() {
       className="relative w-full px-4 py-16 sm:py-24"
     >
       <div className="mx-auto w-full max-w-6xl">
-        {/* Label above the screen so the frame reads as a discrete object. */}
-        <div className="mb-4 px-1 font-mono text-xs uppercase tracking-[0.2em] text-muted">
+        {/* Label above the screen so the frame reads as a discrete object.
+            An h2 like the other sections, so the page outline has no hole. */}
+        <h2 className="mb-4 px-1 font-mono text-xs font-normal uppercase tracking-[0.2em] text-muted">
           02 · {t('sections.work')}
-        </div>
+        </h2>
 
         {/* The screen: a bounded, lit monitor panel sitting on the page. */}
         <div className="relative flex h-[88vh] min-h-[600px] flex-col overflow-hidden rounded-xl border border-line bg-black/20 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.9)]">
@@ -392,6 +402,31 @@ export function Desktop() {
             <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-accent motion-safe:animate-pulse" />
           </div>
         </div>
+
+        {/* Case studies as plain links, outside the screen.
+            The desktop UI only renders a case-study link once a user opens a
+            project window, so nothing linked these pages in the server-rendered
+            HTML — they were reachable via sitemap alone, with no internal link
+            equity. This also gives visitors who don't want to drive the desktop
+            a direct route to the writing. */}
+        <nav aria-label={t('work.caseLinksLabel')} className="mt-6 px-1">
+          <ul className="flex flex-col gap-3 sm:flex-row sm:gap-8">
+            {CASE_LINKS.map(({ slug, titleKey }) => (
+              <li key={slug}>
+                <Link
+                  href={`/work/${slug}`}
+                  className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:text-accent"
+                >
+                  <span className="text-accent">▸</span>
+                  {t(titleKey)}
+                  <span className="text-muted transition-transform duration-300 ease-out group-hover:translate-x-1 motion-reduce:transition-none">
+                    →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </section>
   );

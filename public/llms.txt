@@ -1,0 +1,36 @@
+# Aleksandar Radivojević — Full-Stack Web Developer
+
+> Freelance full-stack developer based in Leskovac, Serbia, building websites
+> and web applications for small and mid-sized businesses. Works in Serbian and
+> English. Available for new projects.
+
+Contact: aradivojevic.dev@outlook.com · +381 61 2308 522
+Location: Leskovac, Serbia — works remotely across Serbia and internationally.
+
+## Services
+
+- Presentation websites and landing pages for local businesses
+- E-commerce stores and custom online sales systems
+- Custom web applications (booking, CRM, internal tools)
+- Ongoing maintenance, hosting support, and iterative improvements
+
+## Work
+
+- [Skedio — scheduling and CRM SaaS](https://alexrad.dev/en/work/skedio):
+  a booking and client-management product for Serbian appointment-based
+  businesses: 24/7 online booking, team calendar, client records, automated
+  reminders. Built and maintained solo.
+- [Optika Cajs — online store and lens configurator](https://alexrad.dev/en/work/optika-cajs):
+  a complete online system for a local optical shop, including an online store,
+  a prescription-lens configurator, and eye-exam booking.
+
+## Pages
+
+- [Home (English)](https://alexrad.dev/en)
+- [Home (Serbian)](https://alexrad.dev/sr)
+
+## Notes
+
+Content is available in both English (`/en`) and Serbian (`/sr`); the two are
+full translations of each other, not partial. Case studies are first-hand
+accounts of work delivered by Aleksandar Radivojević personally.

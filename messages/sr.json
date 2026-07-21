@@ -6,11 +6,11 @@
     "contact": "Kontakt"
   },
   "sections": {
-    "hero": "Hero",
-    "about": "About",
-    "services": "Services",
-    "work": "Work",
-    "contact": "Contact"
+    "hero": "Početak",
+    "about": "O meni",
+    "services": "Usluge",
+    "work": "Radovi",
+    "contact": "Kontakt"
   },
   "hero": {
     "role": "Full-Stack Developer · Leskovac, RS",
@@ -151,6 +151,7 @@
   },
   "work": {
     "intro": "Dubina umesto širine: dva projekta koja govore više od deset u nizu.",
+    "caseLinksLabel": "Studije slučaja",
     "cajs": {
       "role": "Samostalna izrada, od ideje do produkcije",
       "title": "Optika Cajs",
@@ -194,8 +195,8 @@
   },
   "caseCajs": {
     "meta": {
-      "title": "Optika Cajs: Studija slučaja",
-      "description": "Kompletan onlajn sistem za lokalnu optiku: prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda, izgrađeno i vođeno do produkcije samostalno."
+      "title": "Optika Cajs — Prodavnica i konfigurator | Studija slučaja",
+      "description": "Kompletan onlajn sistem za lokalnu optiku: prodavnica, konfigurator dioptrijskih stakala i zakazivanje pregleda — samostalno do produkcije."
     },
     "hero": {
       "kicker": "Studija slučaja",
@@ -280,8 +281,8 @@
   },
   "caseSkedio": {
     "meta": {
-      "title": "Skedio: studija slučaja",
-      "description": "SaaS za zakazivanje i CRM koji pravim za srpske uslužne biznise: onlajn zakazivanje 24/7, timski kalendar, kartoni klijenata i automatski WhatsApp podsetnici, napravljen samostalno od nule."
+      "title": "Skedio — SaaS za zakazivanje i CRM | Studija slučaja",
+      "description": "SaaS za zakazivanje i CRM za srpske uslužne biznise: onlajn zakazivanje 24/7, timski kalendar, kartoni klijenata i WhatsApp podsetnici."
     },
     "hero": {
       "kicker": "Studija slučaja",

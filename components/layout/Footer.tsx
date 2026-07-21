@@ -1,4 +1,4 @@
-import { SITE } from '@/content/site';
+import { SITE, phoneE164 } from '@/content/site';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +10,7 @@ export function Footer() {
         <a href={`mailto:${SITE.email}`} className="transition-colors hover:text-accent">
           {SITE.email}
         </a>
-        <a href={`tel:${SITE.phone.replace(/\s+/g, '')}`} className="transition-colors hover:text-accent">
+        <a href={`tel:${phoneE164()}`} className="transition-colors hover:text-accent">
           {SITE.phone}
         </a>
         <span>{SITE.location}</span>

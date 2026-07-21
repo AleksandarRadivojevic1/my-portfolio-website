@@ -4,7 +4,7 @@
   /* Warm, calm, premium — lifted from the Izanami direction. */
   --color-bg: #0A0805;        /* warm near-black */
   --color-fg: #D9D7D4;        /* warm greige, never pure white */
-  --color-muted: #7C766B;     /* warm grey */
+  --color-muted: #7F796E;     /* warm grey — 4.6:1 on bg, clears WCAG AA (#7C766B was 4.44:1) */
   --color-line: rgba(233,225,214,0.08);
   --color-accent: #E8B04B;    /* CRT amber — the one motivated accent */
   --color-amber: #E8B04B;

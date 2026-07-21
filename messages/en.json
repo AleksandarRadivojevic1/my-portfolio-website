@@ -151,6 +151,7 @@
   },
   "work": {
     "intro": "Depth over breadth: two projects that say more than ten in a row.",
+    "caseLinksLabel": "Case studies",
     "cajs": {
       "role": "Solo build, from idea to production",
       "title": "Optika Cajs",
@@ -194,8 +195,8 @@
   },
   "caseCajs": {
     "meta": {
-      "title": "Optika Cajs: Case Study",
-      "description": "A complete online system for a local optical shop: an online store, a prescription-lens configurator, and eye-exam booking, built from scratch and shipped to production solo."
+      "title": "Optika Cajs — Online Store & Lens Configurator | Case Study",
+      "description": "A complete online system for a local optical shop: online store, prescription-lens configurator, and eye-exam booking — built and shipped solo."
     },
     "hero": {
       "kicker": "Case study",
@@ -280,8 +281,8 @@
   },
   "caseSkedio": {
     "meta": {
-      "title": "Skedio: Case Study",
-      "description": "A scheduling and CRM SaaS I'm building for Serbian appointment businesses: 24/7 online booking, a team calendar, client records, and automated WhatsApp reminders, built solo from scratch."
+      "title": "Skedio — Online Booking & CRM SaaS | Case Study",
+      "description": "A booking and CRM SaaS for Serbian service businesses: 24/7 online booking, team calendar, client records, and automated WhatsApp reminders."
     },
     "hero": {
       "kicker": "Case study",

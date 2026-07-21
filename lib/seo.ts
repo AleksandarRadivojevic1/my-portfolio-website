@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
-import { SITE } from '@/content/site';
+import { SITE, phoneE164 } from '@/content/site';
 import srMessages from '@/messages/sr.json';
 import enMessages from '@/messages/en.json';
 
@@ -16,14 +16,19 @@ type PageMeta = { title: string; description: string };
 // live outside messages/*.json (they're not visible UI copy), but the
 // case-study entry is pulled straight from the message catalog so the
 // <title> stays in sync with the page's own copy.
+// Descriptions are written for the SERP, not reused from `about.bio`: the bio
+// is page prose at ~240 chars, well past the ~155 Google renders, so it was
+// being truncated mid-sentence. These are sized to survive intact.
 const HOME_META: Record<Locale, PageMeta> = {
   sr: {
     title: 'Aleksandar Radivojević — Fulstek Programer | Leskovac, Srbija',
-    description: srMessages.about.bio,
+    description:
+      'Full-stack programer iz Leskovca. Pravim sajtove i veb aplikacije koje pomažu biznisima da rastu — prodavnice, zakazivanje i alati po meri.',
   },
   en: {
     title: 'Aleksandar Radivojević — Full-Stack Developer | Leskovac, Serbia',
-    description: enMessages.about.bio,
+    description:
+      'Full-stack developer in Leskovac, Serbia. I build websites and web apps that help businesses grow — online stores, booking systems, and custom tools.',
   },
 };
 
@@ -125,8 +130,3 @@ export function localBusinessJsonLd() {
   };
 }
 
-// SITE.phone is stored as a local Serbian number ("061 230 8522") for
-// display; JSON-LD wants an E.164-ish absolute form.
-function phoneE164(): string {
-  return `+381${SITE.phone.replace(/^0/, '').replace(/\s+/g, '')}`;
-}
