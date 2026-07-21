@@ -70,7 +70,8 @@ function canAfford3D(): boolean {
  * the sequence duration is a hard floor on Largest Contentful Paint, and it is
  * the whole of Speed Index: nothing visibly populates while it's up. The full
  * version ran ~6.9s, which measured as a 9.8s desktop Speed Index. It is now
- * ~4.3s. Phones get ~2.3s: still a moment, but inside the budget.
+ * ~5.0s (Alex's preferred pace). Phones get ~2.3s: still a moment, but inside
+ * the budget.
  */
 type Timing = {
   /** Corner counter 0 → 100. */
@@ -88,7 +89,7 @@ type Timing = {
 };
 
 const TIMING: Record<'full' | 'fast', Timing> = {
-  full: { count: 1300, power: 300, line: 150, hold: 480, enter: 700, fade: 0.5 },
+  full: { count: 1500, power: 340, line: 175, hold: 580, enter: 780, fade: 0.52 },
   fast: { count: 700, power: 180, line: 70, hold: 250, enter: 350, fade: 0.35 },
 };
 
