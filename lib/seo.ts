@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
-import { SITE, phoneE164 } from '@/content/site';
+import { SITE, SOCIALS, phoneE164 } from '@/content/site';
 import srMessages from '@/messages/sr.json';
 import enMessages from '@/messages/en.json';
 
@@ -21,7 +21,7 @@ type PageMeta = { title: string; description: string };
 // being truncated mid-sentence. These are sized to survive intact.
 const HOME_META: Record<Locale, PageMeta> = {
   sr: {
-    title: 'Aleksandar Radivojević — Fulstek Programer | Leskovac, Srbija',
+    title: 'Aleksandar Radivojević — Full-Stack Programer | Leskovac, Srbija',
     description:
       'Full-stack programer iz Leskovca. Pravim sajtove i veb aplikacije koje pomažu biznisima da rastu — prodavnice, zakazivanje i alati po meri.',
   },
@@ -120,12 +120,8 @@ export function personJsonLd() {
     },
     // Identity corroboration: these tie the Person entity to profiles search
     // engines already know, which is what disambiguates one Aleksandar
-    // Radivojević from another.
-    sameAs: [
-      'https://github.com/AleksandarRadivojevic1',
-      'https://www.linkedin.com/in/aleksandar-radivojevic',
-      'https://www.instagram.com/acko___/',
-    ],
+    // Radivojević from another. Same list the footer links visibly.
+    sameAs: SOCIALS.map((s) => s.href),
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Leskovac',
