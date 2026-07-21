@@ -6,22 +6,11 @@ import { useGLTF, Bounds, Center } from '@react-three/drei';
 import { EffectComposer, Bloom, ChromaticAberration, Noise, Vignette, Glitch } from '@react-three/postprocessing';
 import { BlendFunction, GlitchMode } from 'postprocessing';
 import { CanvasTexture, MeshBasicMaterial, Mesh, Vector2, SRGBColorSpace } from 'three';
+import { BOOT_LINES, type BootState } from './bootLines';
 
-export type BootState = {
-  phase: 'boot' | 'power' | 'log' | 'enter' | 'exit';
-  count: number;
-  visibleLines: number;
-};
-
-export const BOOT_LINES: string[] = [
-  'AR/OS 1.0',
-  '> cpu ......... ok',
-  '> mem ......... ok',
-  '> disk ........ ok',
-  '> net ......... ok',
-  'USER  A. RADIVOJEVIC',
-  'READY',
-];
+// Data lives in ./bootLines so BootPreloader3D can read it without importing
+// this module — which would pull three.js into the initial bundle.
+export { BOOT_LINES, type BootState } from './bootLines';
 
 // ---- The CRT screen, drawn to a 2D canvas and mapped onto the screen mesh ----
 
