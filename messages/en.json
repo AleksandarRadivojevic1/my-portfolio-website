@@ -91,7 +91,7 @@
       },
       "plus": {
         "name": "PLUS: with booking",
-        "includes": "Everything in Standard + online booking with automatic reminders (email/SMS)",
+        "includes": "Everything in Standard + online booking with automatic reminders (email, SMS, WhatsApp, or Viber)",
         "idealFor": "Salons, clinics, and services that live on appointments"
       },
       "app": {
@@ -231,7 +231,7 @@
       },
       "booking": {
         "title": "Eye-exam booking",
-        "body": "Online booking for eye exams, with confirmation and reminders, no phone calls required."
+        "body": "Eye exams are booked through the site. The shop sets the exam time, and an automatic reminder reaches the owner 30 minutes before it."
       },
       "admin": {
         "title": "Admin panel",

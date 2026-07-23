@@ -91,7 +91,7 @@
       },
       "plus": {
         "name": "PLUS: sa zakazivanjem",
-        "includes": "Sve iz Standard + onlajn zakazivanje sa automatskim podsetnicima (email/SMS)",
+        "includes": "Sve iz Standard + onlajn zakazivanje sa automatskim podsetnicima (email, SMS, WhatsApp ili Viber)",
         "idealFor": "Salone, ordinacije i usluge koje žive od termina"
       },
       "app": {
@@ -231,7 +231,7 @@
       },
       "booking": {
         "title": "Zakazivanje pregleda",
-        "body": "Onlajn zakazivanje termina za pregled vida, sa potvrdom i podsetnicima, bez telefonskih poziva."
+        "body": "Pregledi vida se zakazuju preko sajta. Radnja određuje termin pregleda, a automatski podsetnik stiže vlasniku 30 minuta pre njega."
       },
       "admin": {
         "title": "Administratorski panel",
